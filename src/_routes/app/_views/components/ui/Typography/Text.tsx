@@ -1,5 +1,6 @@
-import { css, cx } from "hono/css";
+import { cx } from "hono/css";
 import type { FC } from "hono/jsx";
+import { baseStyle, bodyStyle, labelStyle } from "./styles";
 
 type Props = {
   as?: keyof Hono.IntrinsicElements;
@@ -9,11 +10,11 @@ type Props = {
 function getVariantStyle(variant: Props["variant"]) {
   switch (variant) {
     case "body":
-      return cx(baseStyle, body);
+      return cx(baseStyle, bodyStyle);
     case "label":
-      return cx(baseStyle, label);
+      return cx(baseStyle, labelStyle);
     default:
-      return cx(baseStyle, body);
+      return cx(baseStyle, bodyStyle);
   }
 }
 
@@ -26,21 +27,5 @@ const Text: FC<Props> = async ({ as, variant, children, ...rest }) => {
     </Element>
   );
 };
-
-const baseStyle = css`
-  font-family: var(--font-sans);
-`;
-
-const body = css`
-  font-size: var(--font-size-2);
-  font-weight: var(--font-weight-3);
-  line-height: var(--font-lineheight-3);
-`;
-
-const label = css`
-  font-size: var(--font-size-1);
-  font-weight: var(--font-weight-3);
-  line-height: var(--font-lineheight-2);
-`;
 
 export default Text;

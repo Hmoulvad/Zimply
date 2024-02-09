@@ -2,9 +2,10 @@ import type { FC } from "hono/jsx";
 import { Style } from "hono/css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { resetStyle } from "./styles";
 
 const RootLayout: FC = ({ children }) => (
-  <html>
+  <html class={resetStyle}>
     <head>
       <Style />
       <script
