@@ -1,9 +1,9 @@
-import RootLayout from "_routes/app/_views/layout/Root";
+import Button from "app/views/components/UI/Button";
+import Headline from "app/views/components/UI/Typography/Headline";
+import Text from "app/views/components/UI/Typography/Text";
+import RootLayout from "app/views/layout/Root";
 import type { FC } from "hono/jsx";
-import Headline from "../../components/UI/Typography/Headline";
-import Text from "../../components/UI/Typography/Text";
 import { mainStyle, sectionStyle } from "./styles";
-import Button from "../../components/UI/Button";
 
 const UIPage: FC = () => (
   <RootLayout>

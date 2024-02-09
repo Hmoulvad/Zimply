@@ -1,6 +1,6 @@
+import _api from "api";
+import _app from "app";
 import { Hono } from "hono";
-import _api from "_routes/api";
-import _app from "_routes/app";
 
 export const app = new Hono();
 

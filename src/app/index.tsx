@@ -1,6 +1,6 @@
 import { Hono } from "hono";
-import HomePage from "./_views/pages/Home";
-import UIPage from "./_views/pages/UI";
+import HomePage from "./views/pages/Home";
+import UIPage from "./views/pages/UI";
 
 const _app = new Hono();
 
