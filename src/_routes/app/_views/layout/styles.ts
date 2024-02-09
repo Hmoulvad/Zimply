@@ -28,7 +28,7 @@ export const resetStyle = css`
 
   /* add padding to main */
   main {
-    padding: 1rem;
+    padding: var(--size-2);
   }
 
   /* responsive images/videos */

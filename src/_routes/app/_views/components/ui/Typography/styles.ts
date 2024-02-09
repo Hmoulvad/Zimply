@@ -35,7 +35,7 @@ export const bodyStyle = css`
 `;
 
 export const labelStyle = css`
-  font-size: var(--font-size-1);
+  font-size: var(--font-size-0);
   font-weight: var(--font-weight-3);
   line-height: var(--font-lineheight-2);
 `;
