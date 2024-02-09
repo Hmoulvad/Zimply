@@ -1,5 +1,5 @@
 import type { FC } from "hono/jsx";
-import Link from "../ui/Link";
+import Link from "../UI/Link";
 import { headerStyle, linksStyle } from "./styles";
 
 const Header: FC = () => (
