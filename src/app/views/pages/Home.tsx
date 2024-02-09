@@ -3,7 +3,7 @@ import Headline from "../components/UI/Typography/Headline";
 import RootLayout from "../layout/Root";
 
 const HomePage: FC = () => (
-  <RootLayout>
+  <RootLayout title="HomePage">
     <main>
       <Headline>Home</Headline>
     </main>

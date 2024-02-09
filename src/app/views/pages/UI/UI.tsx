@@ -7,7 +7,7 @@ import { mainStyle, sectionStyle } from "./styles";
 import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
 
 const UIPage: FC = () => (
-  <RootLayout>
+  <RootLayout title="UIPage">
     <main class={mainStyle}>
       <section class={sectionStyle}>
         <Headline as="h1">Display1</Headline>

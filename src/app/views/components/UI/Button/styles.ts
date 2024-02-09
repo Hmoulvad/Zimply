@@ -60,8 +60,6 @@ export const fillStyle = css`
 
 export const loadingStyle = css`
   > svg {
-    height: var(--size-5);
-    width: var(--size-5);
     animation: var(--animation-spin);
     color: var(--gray-7);
   }

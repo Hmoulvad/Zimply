@@ -41,10 +41,12 @@ const Button: FC<Props> = ({
         <Spinner />
       ) : (
         <>
-          <Text as="span" variant="body">
-            {children}
-          </Text>
-          {icon && icon}
+          {children ? (
+            <Text as="span" variant="body">
+              {children}
+            </Text>
+          ) : null}
+          {icon ? icon : null}
         </>
       )}
     </button>
