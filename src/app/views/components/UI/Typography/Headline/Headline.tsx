@@ -1,10 +1,24 @@
 import { cx } from "hono/css";
 import type { FC } from "hono/jsx";
-import { baseStyle, h1Style, h2Style, h3Style, h4Style } from "./styles";
+import {
+  baseStyle,
+  h1Style,
+  h2Style,
+  h3Style,
+  h4Style,
+  h5Style,
+  h6Style,
+} from "./styles";
 
 type Props = {
   as?: keyof Hono.IntrinsicElements;
-  variant?: "display1" | "display2" | "display3" | "display4" | "body";
+  variant?:
+    | "display1"
+    | "display2"
+    | "display3"
+    | "display4"
+    | "display5"
+    | "display6";
 };
 
 function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
@@ -21,6 +35,12 @@ function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
     case "h4":
     case "display4":
       return cx(baseStyle, h4Style);
+    case "h5":
+    case "display5":
+      return cx(baseStyle, h5Style);
+    case "h6":
+    case "display6":
+      return cx(baseStyle, h6Style);
     default:
       return cx(baseStyle, h2Style);
   }

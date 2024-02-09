@@ -1,7 +1,7 @@
 import { cx } from "hono/css";
 import type { FC } from "hono/jsx";
 import Spinner from "../Icons/Spinner";
-import Text from "../Typography/Text";
+import Text from "../Typography/Text/Text";
 import {
   baseStyle,
   disabledStyle,

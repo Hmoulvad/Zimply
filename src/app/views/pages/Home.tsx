@@ -1,5 +1,5 @@
 import type { FC } from "hono/jsx";
-import Headline from "../components/UI/Typography/Headline";
+import Headline from "../components/UI/Typography/Headline/Headline";
 import RootLayout from "../layout/Root";
 
 const HomePage: FC = () => (

@@ -1,10 +1,10 @@
 import Button from "app/views/components/UI/Button";
+import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
 import Headline from "app/views/components/UI/Typography/Headline";
 import Text from "app/views/components/UI/Typography/Text";
 import RootLayout from "app/views/layout/Root";
 import type { FC } from "hono/jsx";
 import { mainStyle, sectionStyle } from "./styles";
-import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
 
 const UIPage: FC = () => (
   <RootLayout title="UIPage">
@@ -14,6 +14,8 @@ const UIPage: FC = () => (
         <Headline as="h2">Display2</Headline>
         <Headline as="h3">Display3</Headline>
         <Headline as="h4">Display4</Headline>
+        <Headline as="h5">Display5</Headline>
+        <Headline as="h6">Display6</Headline>
       </section>
       <section class={sectionStyle}>
         <Text variant="body">Body</Text>

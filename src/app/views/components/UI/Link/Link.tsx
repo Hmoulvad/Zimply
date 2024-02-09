@@ -1,5 +1,5 @@
 import type { FC } from "hono/jsx";
-import Text from "../Typography/Text";
+import Text from "../Typography/Text/Text";
 import { baseStyle } from "./styles";
 
 type Props = Hono.AnchorHTMLAttributes;
