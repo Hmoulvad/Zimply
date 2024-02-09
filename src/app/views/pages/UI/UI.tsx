@@ -4,6 +4,7 @@ import Text from "app/views/components/UI/Typography/Text";
 import RootLayout from "app/views/layout/Root";
 import type { FC } from "hono/jsx";
 import { mainStyle, sectionStyle } from "./styles";
+import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
 
 const UIPage: FC = () => (
   <RootLayout>
@@ -22,6 +23,30 @@ const UIPage: FC = () => (
         <Button size="small">Button Small</Button>
         <Button size="medium">Button Medium</Button>
         <Button size="large">Button Large</Button>
+        <Button icon={<ArrowRight />} size="small">
+          Button Small
+        </Button>
+        <Button icon={<ArrowRight />} size="medium">
+          Button Medium
+        </Button>
+        <Button icon={<ArrowRight />} size="large">
+          Button Large
+        </Button>
+        <Button fill size="small">
+          Button Small
+        </Button>
+        <Button fill size="medium">
+          Button Medium
+        </Button>
+        <Button fill size="large">
+          Button Large
+        </Button>
+        <Button fill isLoading size="small">
+          Button Small
+        </Button>
+        <Button fill disabled size="small">
+          Button Small
+        </Button>
       </section>
     </main>
   </RootLayout>
