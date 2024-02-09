@@ -5,6 +5,7 @@ import Text from "app/views/components/UI/Typography/Text";
 import RootLayout from "app/views/layout/Root";
 import type { FC } from "hono/jsx";
 import { mainStyle, sectionStyle } from "./styles";
+import Accordion from "app/views/components/UI/Accordion/Accordion";
 
 const UIPage: FC = () => (
   <RootLayout title="UIPage">
@@ -34,21 +35,11 @@ const UIPage: FC = () => (
         <Button icon={<ArrowRight />} size="large">
           Button Large
         </Button>
-        <Button fill size="small">
-          Button Small
-        </Button>
-        <Button fill size="medium">
-          Button Medium
-        </Button>
-        <Button fill size="large">
-          Button Large
-        </Button>
-        <Button fill isLoading size="small">
-          Button Small
-        </Button>
-        <Button fill disabled size="small">
-          Button Small
-        </Button>
+      </section>
+      <section>
+        <Accordion title="Accordion example">
+          This is the content of the accordion.
+        </Accordion>
       </section>
     </main>
   </RootLayout>

@@ -4,25 +4,38 @@ import { baseStyle, bodyStyle, labelStyle } from "./styles";
 
 type Props = {
   as?: keyof Hono.IntrinsicElements;
+  className: Promise<string>;
   variant?: "body" | "label";
 };
 
-function getVariantStyle(variant: Props["variant"]) {
+function getVariantStyle(
+  variant: Props["variant"],
+  className: Props["className"]
+) {
+  let args = [baseStyle];
   switch (variant) {
     case "body":
-      return cx(baseStyle, bodyStyle);
+      args.push(bodyStyle);
     case "label":
-      return cx(baseStyle, labelStyle);
+      args.push(labelStyle);
     default:
-      return cx(baseStyle, bodyStyle);
+      args.push(bodyStyle);
   }
+  if (className) args.push(className);
+  return cx(...args);
 }
 
-const Text: FC<Props> = async ({ as, variant, children, ...rest }) => {
+const Text: FC<Props> = async ({
+  as,
+  variant,
+  className,
+  children,
+  ...rest
+}) => {
   const Element = as ?? "p";
 
   return (
-    <Element class={getVariantStyle(variant)} {...rest}>
+    <Element class={getVariantStyle(variant, className)} {...rest}>
       {children}
     </Element>
   );
