@@ -8,23 +8,6 @@ type Props = {
   variant?: "body" | "label";
 };
 
-function getVariantStyle(
-  variant: Props["variant"],
-  className: Props["className"]
-) {
-  let args = [baseStyle];
-  switch (variant) {
-    case "body":
-      args.push(bodyStyle);
-    case "label":
-      args.push(labelStyle);
-    default:
-      args.push(bodyStyle);
-  }
-  if (className) args.push(className);
-  return cx(...args);
-}
-
 const Text: FC<Props> = async ({
   as,
   variant,
@@ -40,5 +23,24 @@ const Text: FC<Props> = async ({
     </Element>
   );
 };
+
+function getVariantStyle(
+  variant: Props["variant"],
+  className: Props["className"]
+) {
+  let args = [baseStyle];
+  switch (variant) {
+    case "body":
+      args.push(bodyStyle);
+      break;
+    case "label":
+      args.push(labelStyle);
+      break;
+    default:
+      args.push(bodyStyle);
+  }
+  if (className) args.push(className);
+  return cx(...args);
+}
 
 export default Text;

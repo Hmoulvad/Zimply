@@ -21,6 +21,16 @@ type Props = {
     | "display6";
 };
 
+const Headline: FC<Props> = async ({ as, variant, children, ...rest }) => {
+  const Element = as ?? "h2";
+
+  return (
+    <Element class={getVariantStyle(variant, as)} {...rest}>
+      {children}
+    </Element>
+  );
+};
+
 function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
   switch (variant ?? as) {
     case "h1":
@@ -45,15 +55,5 @@ function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
       return cx(baseStyle, h2Style);
   }
 }
-
-const Headline: FC<Props> = async ({ as, variant, children, ...rest }) => {
-  const Element = as ?? "h2";
-
-  return (
-    <Element class={getVariantStyle(variant, as)} {...rest}>
-      {children}
-    </Element>
-  );
-};
 
 export default Headline;
