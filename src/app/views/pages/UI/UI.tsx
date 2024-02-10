@@ -6,6 +6,7 @@ import RootLayout from "app/views/layout/Root";
 import type { FC } from "hono/jsx";
 import { mainStyle, sectionStyle } from "./styles";
 import Accordion from "app/views/components/UI/Accordion/Accordion";
+import Dialog from "app/views/components/UI/Dialog/Dialog";
 
 const UIPage: FC = () => (
   <RootLayout title="UIPage">
@@ -26,6 +27,9 @@ const UIPage: FC = () => (
         <Button size="small">Button Small</Button>
         <Button size="medium">Button Medium</Button>
         <Button size="large">Button Large</Button>
+        <Button isLoading size="small" />
+        <Button isLoading size="medium" />
+        <Button isLoading size="large" />
         <Button icon={<ArrowRight />} size="small">
           Button Small
         </Button>
@@ -40,6 +44,10 @@ const UIPage: FC = () => (
         <Accordion title="Accordion example">
           This is the content of the accordion.
         </Accordion>
+      </section>
+      <section x-data class={sectionStyle}>
+        <Button x-on:click="$refs.dialogRef.showModal()">Open Dialog</Button>
+        <Dialog title="AlpineJS Dialog" ref="dialogRef"></Dialog>
       </section>
     </main>
   </RootLayout>

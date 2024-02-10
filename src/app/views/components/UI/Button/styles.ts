@@ -4,7 +4,7 @@ export const baseStyle = css`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-inline: var(--size-3);
+  padding-inline: var(--size-2);
   cursor: pointer;
   width: fit-content;
   background-color: transparent;
