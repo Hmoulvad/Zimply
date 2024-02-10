@@ -4,6 +4,7 @@ export const detailsStyle = css`
   width: fit-content;
   border: var(--border-size-1) solid black;
   padding: var(--size-2);
+  min-height: calc(var(--size-7) + var(--size-2));
   border-radius: var(--radius-2);
 
   &[open] {

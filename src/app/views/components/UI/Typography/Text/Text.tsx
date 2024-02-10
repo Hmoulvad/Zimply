@@ -4,7 +4,7 @@ import { baseStyle, bodyStyle, labelStyle } from "./styles";
 
 type Props = {
   as?: keyof Hono.IntrinsicElements;
-  className: Promise<string>;
+  className?: Promise<string>;
   variant?: "body" | "label";
 };
 

@@ -36,7 +36,7 @@ const UIPage: FC = () => (
           Button Large
         </Button>
       </section>
-      <section>
+      <section class={sectionStyle}>
         <Accordion title="Accordion example">
           This is the content of the accordion.
         </Accordion>
