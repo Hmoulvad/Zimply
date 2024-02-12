@@ -7,12 +7,6 @@ const HomePage: FC = () => (
   <RootLayout title="HomePage">
     <main>
       <Headline>Home</Headline>
-      <img
-        src="static/placeholder.jpg"
-        width={200}
-        height={200}
-        alt="placeholder"
-      />
       <Grid></Grid>
     </main>
   </RootLayout>

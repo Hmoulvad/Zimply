@@ -2,19 +2,33 @@ import { Style } from "hono/css";
 import type { FC } from "hono/jsx";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
+import { htmlStyle } from "./styles";
 
 type Props = {
   title: string;
 };
 
 const RootLayout: FC<Props> = ({ children, title }) => (
-  <html>
+  <html class={htmlStyle}>
+    <style>
+      {`
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+      
+        * {
+          padding: 0;
+          margin: 0;
+          font: inherit;
+          font-family: var(--font-sans);
+        }
+      `}
+    </style>
     <head>
-      {/* CSS Style for Hono */}
       <Style />
-      {/* StyleSheets */}
       <StyleSheets />
-      {/* Scripts */}
       <Scripts />
       <title>{title}</title>
     </head>
@@ -30,12 +44,6 @@ const StyleSheets: FC = () => (
   <>
     {/* Open Props Variables */}
     <link rel="stylesheet" href="https://unpkg.com/open-props" />
-    {/* Normalize CSS */}
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
-    />
-    <link rel="stylesheet" href="static/css/style.css" />
   </>
 );
 
