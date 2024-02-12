@@ -17,6 +17,7 @@ export const dialogStyle = css`
   border: none;
   max-height: 100vh;
   padding: var(--size-3);
+  box-shadow: var(--shadow-3);
 
   &[open] {
     &::backdrop {
@@ -26,6 +27,7 @@ export const dialogStyle = css`
 `;
 
 export const centerStyle = css`
+  border-radius: var(--radius-2);
   width: var(--size-15);
   height: var(--size-15);
   max-width: 80vw;

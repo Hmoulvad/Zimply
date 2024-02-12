@@ -18,7 +18,7 @@ type Props = {
   title: string;
 };
 
-const Dialog: FC<Props> = ({ children, ref, type = "aside", title }) => (
+const Dialog: FC<Props> = ({ children, ref, type = "center", title }) => (
   <dialog x-ref={ref} class={getDialogStyle(type)}>
     <div class={contentStyle}>
       <header class={headerStyle}>

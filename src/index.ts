@@ -1,10 +1,21 @@
-import _api from "api";
-import _app from "app";
+import apiRoutes from "api/routes";
+import appRoutes from "app/routes";
 import { Hono } from "hono";
+import { serveStatic } from "hono/bun";
 
-export const app = new Hono();
+const app = new Hono();
 
-app.route("/", _app);
-app.route("/api", _api);
+app.use(
+  "/static/*",
+  serveStatic({
+    root: "/",
+    onNotFound: (path, c) => {
+      console.log(`${path} is not found, you access ${c.req.path}`);
+    },
+  })
+);
+app.use("/favicon.ico", serveStatic({ path: "./favicon.ico" }));
+app.route("/", appRoutes);
+app.route("/api", apiRoutes);
 
 export default app;

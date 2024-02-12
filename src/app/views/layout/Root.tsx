@@ -1,7 +1,6 @@
-import type { FC } from "hono/jsx";
 import { Style } from "hono/css";
+import type { FC } from "hono/jsx";
 import Footer from "../components/Footer";
-import { resetStyle } from "./styles";
 import Header from "../components/Header";
 
 type Props = {
@@ -9,19 +8,14 @@ type Props = {
 };
 
 const RootLayout: FC<Props> = ({ children, title }) => (
-  <html class={resetStyle}>
+  <html>
     <head>
+      {/* CSS Style for Hono */}
       <Style />
-      <script
-        defer
-        src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
-      ></script>
-      {/* <script
-        src="https://unpkg.com/htmx.org@1.9.10"
-        integrity="sha384-D1Kt99CQMDuVetoL1lrYwg5t+9QdHe7NLX/SoJYkXDFfX37iInKRy5xLSi8nO7UC"
-        crossorigin="anonymous"
-      /> */}
-      <link rel="stylesheet" href="https://unpkg.com/open-props" />
+      {/* StyleSheets */}
+      <StyleSheets />
+      {/* Scripts */}
+      <Scripts />
       <title>{title}</title>
     </head>
     <body>
@@ -30,6 +24,29 @@ const RootLayout: FC<Props> = ({ children, title }) => (
       <Footer />
     </body>
   </html>
+);
+
+const StyleSheets: FC = () => (
+  <>
+    {/* Open Props Variables */}
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    {/* Normalize CSS */}
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="static/css/style.css" />
+  </>
+);
+
+const Scripts: FC = () => (
+  <>
+    {/* AlpineJS */}
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </>
 );
 
 export default RootLayout;
