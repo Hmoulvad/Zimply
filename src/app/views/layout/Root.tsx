@@ -10,22 +10,6 @@ type Props = {
 
 const RootLayout: FC<Props> = ({ children, title }) => (
   <html class={htmlStyle}>
-    <style>
-      {`
-        *,
-        *::before,
-        *::after {
-          box-sizing: border-box;
-        }
-      
-        * {
-          padding: 0;
-          margin: 0;
-          font: inherit;
-          font-family: var(--font-sans);
-        }
-      `}
-    </style>
     <head>
       <Style />
       <StyleSheets />
@@ -44,6 +28,23 @@ const StyleSheets: FC = () => (
   <>
     {/* Open Props Variables */}
     <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    {/* Global styles */}
+    <style>
+      {`
+        *,
+        *::before,
+        *::after {
+          box-sizing: border-box;
+        }
+      
+        * {
+          padding: 0;
+          margin: 0;
+          font: inherit;
+          font-family: var(--font-sans);
+        }
+      `}
+    </style>
   </>
 );
 
