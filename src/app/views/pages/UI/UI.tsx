@@ -7,6 +7,7 @@ import type { FC } from "hono/jsx";
 import { mainStyle, sectionStyle } from "./styles";
 import Accordion from "app/views/components/UI/Accordion/Accordion";
 import Dialog from "app/views/components/UI/Dialog/Dialog";
+import Select from "app/views/components/UI/Select";
 
 const UIPage: FC = () => (
   <RootLayout title="UIPage">
@@ -22,6 +23,12 @@ const UIPage: FC = () => (
       <section class={sectionStyle}>
         <Text variant="body">Body</Text>
         <Text variant="label">Label</Text>
+      </section>
+      <section class={sectionStyle}>
+        <Select
+          label="Label"
+          options={["Item1", "Item2", "Item3", "Item4", "Item5"]}
+        />
       </section>
       <section class={sectionStyle}>
         <Button size="small">Button Small</Button>

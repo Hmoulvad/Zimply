@@ -3,10 +3,6 @@ import { FC } from "hono/jsx";
 
 const StyleSheets: FC = () => (
   <>
-    {/* Hono CSS */}
-    <Style />
-    {/* Open Props Variables */}
-    <link rel="stylesheet" href="https://unpkg.com/open-props" />
     {/* Global styles */}
     <style>
       {`
@@ -24,6 +20,10 @@ const StyleSheets: FC = () => (
           }
         `}
     </style>
+    {/* Open Props Variables */}
+    <link rel="stylesheet" href="https://unpkg.com/open-props" />
+    {/* Hono CSS */}
+    <Style />
   </>
 );
 
