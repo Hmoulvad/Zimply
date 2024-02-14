@@ -1,5 +1,5 @@
 import { cx } from "hono/css";
-import type { FC } from "hono/jsx";
+import { PropsWithChildren } from "hono/jsx";
 import Spinner from "../Icons/Spinner";
 import Text from "../Typography/Text/Text";
 import {
@@ -19,9 +19,10 @@ type Props = {
   iconPosition?: "left" | "right";
   size?: "small" | "medium" | "large";
   isLoading?: boolean;
-} & Hono.ButtonHTMLAttributes;
+} & Hono.ButtonHTMLAttributes &
+  PropsWithChildren;
 
-const Button: FC<Props> = ({
+export default function Button({
   children,
   fill = false,
   icon,
@@ -30,7 +31,7 @@ const Button: FC<Props> = ({
   isLoading = false,
   disabled = false,
   ...rest
-}) => {
+}: Props) {
   return (
     <button
       class={getButtonStyle({ size, iconPosition, fill, isLoading, disabled })}
@@ -51,7 +52,7 @@ const Button: FC<Props> = ({
       )}
     </button>
   );
-};
+}
 
 function getButtonStyle({
   size,
@@ -84,4 +85,3 @@ function getButtonStyle({
 
   return cx(...args);
 }
-export default Button;

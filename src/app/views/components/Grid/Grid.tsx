@@ -1,5 +1,5 @@
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 
-const Grid: FC = ({ children }) => <section></section>;
-
-export default Grid;
+export default function Grid({ children }: PropsWithChildren) {
+  return <section></section>;
+}

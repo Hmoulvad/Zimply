@@ -1,5 +1,5 @@
 import { cx } from "hono/css";
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 import {
   asideStyle,
   centerStyle,
@@ -16,28 +16,33 @@ type Props = {
   ref: string;
   type?: "center" | "aside";
   title: string;
-};
+} & PropsWithChildren;
 
-const Dialog: FC<Props> = ({ children, ref, type = "center", title }) => (
-  <dialog x-ref={ref} class={getDialogStyle(type)}>
-    <div class={contentStyle}>
-      <header class={headerStyle}>
-        <Headline as="h3">{title}</Headline>
-        <Button
-          size="small"
-          x-on:click="$refs.dialogRef.close()"
-          icon={<X />}
-        />
-      </header>
-      <section class={sectionStyle}>{children}</section>
-    </div>
-  </dialog>
-);
+export default function Dialog({
+  children,
+  ref,
+  type = "center",
+  title,
+}: Props) {
+  return (
+    <dialog x-ref={ref} class={getDialogStyle(type)}>
+      <div class={contentStyle}>
+        <header class={headerStyle}>
+          <Headline as="h3">{title}</Headline>
+          <Button
+            size="small"
+            x-on:click="$refs.dialogRef.close()"
+            icon={<X />}
+          />
+        </header>
+        <section class={sectionStyle}>{children}</section>
+      </div>
+    </dialog>
+  );
+}
 
 function getDialogStyle(type: Props["type"]) {
   let styles = [dialogStyle];
   styles.push(type === "center" ? centerStyle : asideStyle);
   return cx(...styles);
 }
-
-export default Dialog;

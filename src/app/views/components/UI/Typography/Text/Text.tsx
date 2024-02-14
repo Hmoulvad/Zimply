@@ -1,20 +1,20 @@
 import { cx } from "hono/css";
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 import { baseStyle, bodyStyle, labelStyle } from "./styles";
 
 type Props = {
   as?: keyof Hono.IntrinsicElements;
   className?: Promise<string>;
   variant?: "body" | "label";
-};
+} & PropsWithChildren;
 
-const Text: FC<Props> = async ({
+export default function Text({
   as,
   variant,
   className,
   children,
   ...rest
-}) => {
+}: Props) {
   const Element = as ?? "p";
 
   return (
@@ -22,7 +22,7 @@ const Text: FC<Props> = async ({
       {children}
     </Element>
   );
-};
+}
 
 function getVariantStyle(
   variant: Props["variant"],
@@ -42,5 +42,3 @@ function getVariantStyle(
   if (className) args.push(className);
   return cx(...args);
 }
-
-export default Text;

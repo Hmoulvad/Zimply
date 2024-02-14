@@ -4,7 +4,7 @@
     "test": "bun test index.test.ts"
   },
   "dependencies": {
-    "hono": "^3.12.8"
+    "hono": "^4.0.2"
   },
   "devDependencies": {
     "@types/bun": "latest"

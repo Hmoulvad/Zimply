@@ -1,13 +1,13 @@
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 import Text from "../Typography/Text/Text";
 import { baseStyle } from "./styles";
 
-type Props = Hono.AnchorHTMLAttributes;
+type Props = Hono.AnchorHTMLAttributes & PropsWithChildren;
 
-const Link: FC<Props> = ({ children, ...rest }) => (
-  <a class={baseStyle} {...rest}>
-    <Text as="span">{children}</Text>
-  </a>
-);
-
-export default Link;
+export default function Link({ children, ...rest }: Props) {
+  return (
+    <a class={baseStyle} {...rest}>
+      <Text as="span">{children}</Text>
+    </a>
+  );
+}

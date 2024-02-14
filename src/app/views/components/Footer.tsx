@@ -1,5 +1,5 @@
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 
-const Footer: FC = ({ children }) => <footer></footer>;
-
-export default Footer;
+export default function Footer({ children }: PropsWithChildren) {
+  return <footer></footer>;
+}

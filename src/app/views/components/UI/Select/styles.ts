@@ -4,12 +4,9 @@ export const containerStyle = css`
   position: relative;
   width: fit-content;
 
-  &::after {
-    content: "";
-    width: var(--size-3);
-    height: var(--size-2);
-    background-color: var(--gray-6);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  & > svg {
+    width: var(--size-4);
+    height: var(--size-4);
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
@@ -25,7 +22,6 @@ export const selectStyle = css`
   background-color: transparent;
   border: var(--border-size-1) solid black;
   border-radius: var(--radius-2);
-  outline: none;
   min-width: var(--size-13);
 `;
 

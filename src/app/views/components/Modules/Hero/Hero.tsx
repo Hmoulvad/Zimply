@@ -1,5 +1,5 @@
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 
-const Hero: FC = ({ children }) => <section></section>;
-
-export default Hero;
+export default function Hero({ children }: PropsWithChildren) {
+  return <section></section>;
+}

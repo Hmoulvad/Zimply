@@ -1,5 +1,5 @@
 import { cx } from "hono/css";
-import type { FC } from "hono/jsx";
+import type { PropsWithChildren } from "hono/jsx";
 import {
   baseStyle,
   h1Style,
@@ -19,9 +19,9 @@ type Props = {
     | "display4"
     | "display5"
     | "display6";
-};
+} & PropsWithChildren;
 
-const Headline: FC<Props> = async ({ as, variant, children, ...rest }) => {
+export default function Headline({ as, variant, children, ...rest }: Props) {
   const Element = as ?? "h2";
 
   return (
@@ -29,7 +29,7 @@ const Headline: FC<Props> = async ({ as, variant, children, ...rest }) => {
       {children}
     </Element>
   );
-};
+}
 
 function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
   switch (variant ?? as) {
@@ -55,5 +55,3 @@ function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
       return cx(baseStyle, h2Style);
   }
 }
-
-export default Headline;
