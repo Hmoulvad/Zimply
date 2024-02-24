@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "bun run --hot src/index.ts",
-    "test": "bun test index.test.ts"
+    "test": "bun test index.test.ts",
+    "build-hono": "bun build ./src/index.ts --outdir ./build"
   },
   "dependencies": {
     "hono": "^4.0.2"
