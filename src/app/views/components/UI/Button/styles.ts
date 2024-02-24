@@ -12,6 +12,8 @@ export const baseStyle = css`
   border: var(--border-size-1) solid black;
   transition: background-color 0.2s ease;
   gap: var(--size-2);
+  color: black;
+  text-decoration: none;
 
   &:hover {
     background-color: var(--gray-2);

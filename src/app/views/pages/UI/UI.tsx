@@ -1,12 +1,12 @@
-import Button from "app/views/components/UI/Button";
+import Accordion from "app/views/components/UI/Accordion/Accordion";
+import { Button } from "app/views/components/UI/Button";
+import Dialog from "app/views/components/UI/Dialog/Dialog";
 import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
+import Select from "app/views/components/UI/Select";
 import Headline from "app/views/components/UI/Typography/Headline";
 import Text from "app/views/components/UI/Typography/Text";
 import RootLayout from "app/views/layout/Root";
 import { mainStyle, sectionStyle } from "./styles";
-import Accordion from "app/views/components/UI/Accordion/Accordion";
-import Dialog from "app/views/components/UI/Dialog/Dialog";
-import Select from "app/views/components/UI/Select";
 
 export default function UIPage() {
   return (

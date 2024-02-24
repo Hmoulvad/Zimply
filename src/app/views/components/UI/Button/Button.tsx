@@ -1,5 +1,4 @@
 import { cx } from "hono/css";
-import { PropsWithChildren } from "hono/jsx";
 import Spinner from "../Icons/Spinner";
 import Text from "../Typography/Text/Text";
 import {
@@ -12,15 +11,9 @@ import {
   mediumStyle,
   smallStyle,
 } from "./styles";
+import { ButtonProps } from "./types";
 
-type Props = {
-  fill?: boolean;
-  icon?: JSX.Element;
-  iconPosition?: "left" | "right";
-  size?: "small" | "medium" | "large";
-  isLoading?: boolean;
-} & Hono.ButtonHTMLAttributes &
-  PropsWithChildren;
+type Props = ButtonProps & Hono.ButtonHTMLAttributes;
 
 export default function Button({
   children,

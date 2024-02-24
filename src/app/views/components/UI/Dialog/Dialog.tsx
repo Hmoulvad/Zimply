@@ -8,9 +8,9 @@ import {
   headerStyle,
   sectionStyle,
 } from "./styles";
-import Button from "../Button";
 import X from "../Icons/X";
 import Headline from "../Typography/Headline";
+import { Button } from "../Button";
 
 type Props = {
   ref: string;
