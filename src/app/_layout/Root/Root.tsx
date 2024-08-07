@@ -18,7 +18,7 @@ export default function RootLayout({ children, title }: Props) {
       </head>
       <body>
         <Header />
-        {children}
+        <main>{children}</main>
         <Footer />
       </body>
     </html>

@@ -72,6 +72,9 @@ export default function StyleSheets() {
 
         main {
           padding: var(--size-2);
+          display: flex;
+          flex-direction: column;
+          gap: var(--size-3);
         }
       `}
       </style>
