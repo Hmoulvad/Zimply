@@ -1,5 +1,5 @@
 import { cx } from "hono/css";
-import Text from "../Typography/Text/Text";
+import Text from "../Typography/Text";
 import {
   baseStyle,
   fillStyle,

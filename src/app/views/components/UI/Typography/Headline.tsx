@@ -1,17 +1,9 @@
-import { cx } from "hono/css";
+import { css, cx } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
-import {
-  baseStyle,
-  h1Style,
-  h2Style,
-  h3Style,
-  h4Style,
-  h5Style,
-  h6Style,
-} from "./styles";
+import { JSX } from "hono/jsx";
 
 type Props = {
-  as?: keyof Hono.IntrinsicElements;
+  as?: keyof JSX.IntrinsicElements;
   variant?:
     | "display1"
     | "display2"
@@ -55,3 +47,33 @@ function getVariantStyle(variant: Props["variant"], as: Props["as"]) {
       return cx(baseStyle, h2Style);
   }
 }
+
+const baseStyle = css`
+  font-family: var(--font-sans);
+  line-height: var(--font-lineheight-1);
+  font-weight: var(--font-weight-7);
+`;
+
+const h1Style = css`
+  font-size: var(--font-size-8);
+`;
+
+const h2Style = css`
+  font-size: var(--font-size-7);
+`;
+
+const h3Style = css`
+  font-size: var(--font-size-6);
+`;
+
+const h4Style = css`
+  font-size: var(--font-size-5);
+`;
+
+const h5Style = css`
+  font-size: var(--font-size-4);
+`;
+
+const h6Style = css`
+  font-size: var(--font-size-3);
+`;

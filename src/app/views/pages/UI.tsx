@@ -1,4 +1,4 @@
-import Accordion from "app/views/components/UI/Accordion/Accordion";
+import Accordion from "app/views/components/UI/Accordion";
 import { Button } from "app/views/components/UI/Button";
 import Dialog from "app/views/components/UI/Dialog/Dialog";
 import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
@@ -6,7 +6,7 @@ import Select from "app/views/components/UI/Select";
 import Headline from "app/views/components/UI/Typography/Headline";
 import Text from "app/views/components/UI/Typography/Text";
 import RootLayout from "app/views/layout/Root";
-import { mainStyle, sectionStyle } from "./styles";
+import { css } from "hono/css";
 
 export default function UIPage() {
   return (
@@ -60,3 +60,13 @@ export default function UIPage() {
     </RootLayout>
   );
 }
+
+const mainStyle = css`
+  display: grid;
+  gap: var(--size-2);
+`;
+
+const sectionStyle = css`
+  display: grid;
+  gap: var(--size-2);
+`;

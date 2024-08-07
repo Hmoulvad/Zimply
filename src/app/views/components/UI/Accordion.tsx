@@ -1,6 +1,23 @@
 import { css } from "hono/css";
+import type { PropsWithChildren } from "hono/jsx";
+import Text from "./Typography/Text";
 
-export const detailsStyle = css`
+type Props = {
+  title: string;
+} & PropsWithChildren;
+
+export default function Accordion({ title, children }: Props) {
+  return (
+    <details class={detailsStyle}>
+      <Text as="summary" className={summaryStyle}>
+        {title}
+      </Text>
+      {children}
+    </details>
+  );
+}
+
+const detailsStyle = css`
   width: fit-content;
   border: var(--border-size-1) solid black;
   padding: var(--size-2);
@@ -14,7 +31,7 @@ export const detailsStyle = css`
   }
 `;
 
-export const summaryStyle = css`
+const summaryStyle = css`
   margin: calc(var(--size-2) * -1);
   padding: var(--size-2);
   display: block;

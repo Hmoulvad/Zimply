@@ -1,9 +1,8 @@
-import { cx } from "hono/css";
-import type { PropsWithChildren } from "hono/jsx";
-import { baseStyle, bodyStyle, labelStyle } from "./styles";
+import { css, cx } from "hono/css";
+import type { JSX, PropsWithChildren } from "hono/jsx";
 
 type Props = {
-  as?: keyof Hono.IntrinsicElements;
+  as?: keyof JSX.IntrinsicElements;
   className?: Promise<string>;
   variant?: "body" | "label";
 } & PropsWithChildren;
@@ -42,3 +41,19 @@ function getVariantStyle(
   if (className) args.push(className);
   return cx(...args);
 }
+
+const baseStyle = css`
+  font-family: var(--font-sans);
+`;
+
+const bodyStyle = css`
+  font-size: var(--font-size-2);
+  font-weight: var(--font-weight-3);
+  line-height: var(--font-lineheight-3);
+`;
+
+const labelStyle = css`
+  font-size: var(--font-size-0);
+  font-weight: var(--font-weight-3);
+  line-height: var(--font-lineheight-2);
+`;

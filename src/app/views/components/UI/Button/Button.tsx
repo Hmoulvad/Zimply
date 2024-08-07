@@ -1,6 +1,7 @@
 import { cx } from "hono/css";
+import { JSX } from "hono/jsx";
 import Spinner from "../Icons/Spinner";
-import Text from "../Typography/Text/Text";
+import Text from "../Typography/Text";
 import {
   baseStyle,
   disabledStyle,
@@ -13,7 +14,7 @@ import {
 } from "./styles";
 import { ButtonProps } from "./types";
 
-type Props = ButtonProps & Hono.ButtonHTMLAttributes;
+type Props = ButtonProps & JSX.HTMLAttributes;
 
 export default function Button({
   children,

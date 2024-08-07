@@ -1,5 +1,5 @@
 import Grid from "../components/Grid";
-import Hero from "../components/Modules/Hero/Hero";
+import Hero from "../components/Modules/Hero";
 import RootLayout from "../layout/Root";
 
 export default function HomePage() {

@@ -1,19 +1,12 @@
+import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
-import {
-  colSpan12,
-  colSpan3,
-  colSpan4,
-  colSpan6,
-  colSpan8,
-  gridStyle,
-} from "./styles";
 
-type Coloumn = {
+type Column = {
   span: 3 | 4 | 6 | 8 | 12;
 } & PropsWithChildren;
 
 type Props = {
-  columns: Coloumn[];
+  columns: Column[];
 };
 
 export default function Grid({ columns }: Props) {
@@ -26,11 +19,11 @@ export default function Grid({ columns }: Props) {
   );
 }
 
-function Column({ children, span }: Coloumn) {
+function Column({ children, span }: Column) {
   return <li class={getColSpan(span)}>{children}</li>;
 }
 
-function getColSpan(span: Coloumn["span"]) {
+function getColSpan(span: Column["span"]) {
   switch (span) {
     case 3:
       return colSpan3;
@@ -44,3 +37,30 @@ function getColSpan(span: Coloumn["span"]) {
       return colSpan12;
   }
 }
+
+const gridStyle = css`
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--size-3);
+  list-style: none;
+`;
+
+const colSpan3 = css`
+  grid-column: span 3;
+`;
+
+const colSpan4 = css`
+  grid-column: span 4;
+`;
+
+const colSpan6 = css`
+  grid-column: span 6;
+`;
+
+const colSpan8 = css`
+  grid-column: span 8;
+`;
+
+const colSpan12 = css`
+  grid-column: span 12;
+`;

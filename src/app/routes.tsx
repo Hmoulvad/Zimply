@@ -1,4 +1,4 @@
-import { Hono } from "hono";
+import { Hono } from "hono/tiny";
 import HomePage from "./views/pages/Home";
 import UIPage from "./views/pages/UI";
 
