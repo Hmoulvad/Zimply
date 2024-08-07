@@ -1,6 +1,6 @@
 import { Hono } from "hono/tiny";
-import HomePage from "./views/pages/Home";
-import UIPage from "./views/pages/UI";
+import HomePage from "./_pages/Home";
+import UIPage from "./_pages/UI";
 
 const appRoutes = new Hono();
 

@@ -1,12 +1,12 @@
-import Accordion from "app/views/components/UI/Accordion";
-import { Button } from "app/views/components/UI/Button";
-import Dialog from "app/views/components/UI/Dialog/Dialog";
-import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
-import Select from "app/views/components/UI/Select";
-import RootLayout from "app/views/layout/Root";
+import Accordion from "app/_components/UI/Accordion";
+import { Button } from "app/_components/UI/Button";
+import Dialog from "app/_components/UI/Dialog/Dialog";
+import ArrowRight from "app/_components/UI/Icons/ArrowRight";
+import Select from "app/_components/UI/Select";
+import RootLayout from "app/_layout/Root";
 import { css } from "hono/css";
-import Display from "../components/UI/Display";
-import Typography from "../components/UI/Typography";
+import Display from "../_components/UI/Display";
+import Typography from "../_components/UI/Typography";
 
 export default function UIPage() {
   return (

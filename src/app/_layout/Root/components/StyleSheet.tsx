@@ -63,6 +63,16 @@ export default function StyleSheets() {
             scroll-padding-top: var(--space-08);
           }
         }
+
+        body {
+          display: grid;
+          grid-template-rows: auto 1fr auto;
+          gap: var(--size-2);
+        }
+
+        main {
+          padding: var(--size-2);
+        }
       `}
       </style>
       {/* Open Props Variables */}
