@@ -1,9 +1,9 @@
 import type { PropsWithChildren } from "hono/jsx";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
-import Scripts from "./Scripts";
-import StyleSheets from "./StyleSheet";
-import { htmlStyle } from "./styles";
+import Scripts from "./components/Scripts";
+import StyleSheets from "./components/StyleSheet";
+import { htmlStyle } from "./styles/reset";
 
 type Props = {
   title: string;
