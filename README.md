@@ -54,3 +54,7 @@ bun run deploy
 - `dev`: Runs the development server with hot reloading.
 - `test`: Runs the test suite.
 - `deploy`: Deploys the application to Cloudflare Workers with minification.
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
