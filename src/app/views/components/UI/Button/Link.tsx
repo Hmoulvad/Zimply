@@ -1,5 +1,6 @@
 import { cx } from "hono/css";
-import Text from "../Typography/Text";
+import { JSX } from "hono/jsx";
+import Typography from "../Typography";
 import {
   baseStyle,
   fillStyle,
@@ -10,7 +11,7 @@ import {
 } from "./styles";
 import { ButtonProps } from "./types";
 
-type Props = ButtonProps & Hono.AnchorHTMLAttributes;
+type Props = ButtonProps & JSX.HTMLAttributes;
 
 export default function LinkButton({
   children,
@@ -23,9 +24,9 @@ export default function LinkButton({
   return (
     <a class={getButtonStyle({ size, iconPosition, fill })} {...rest}>
       {children ? (
-        <Text as="span" variant="body">
+        <Typography as="span" variant="body">
           {children}
-        </Text>
+        </Typography>
       ) : null}
       {icon ? icon : null}
     </a>

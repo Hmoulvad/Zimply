@@ -13,7 +13,7 @@ type Props = {
     | "display6";
 } & PropsWithChildren;
 
-export default function Headline({ as, variant, children, ...rest }: Props) {
+export default function Display({ as, variant, children, ...rest }: Props) {
   const Element = as ?? "h2";
 
   return (

@@ -1,7 +1,8 @@
 import { css } from "hono/css";
 import { LinkButton } from "../UI/Button";
-import Headline from "../UI/Typography/Headline";
-import Text from "../UI/Typography/Text";
+import Headline from "../UI/Display";
+import Typography from "../UI/Typography";
+import Display from "../UI/Display";
 
 type Props = {
   image: {
@@ -21,8 +22,8 @@ export default function Hero({ image, title, subtitle, link }: Props) {
     <section class={heroStyle}>
       <img src={image.src} alt={image.alt} />
       <div class={contentStyle}>
-        <Headline>{title}</Headline>
-        <Text>{subtitle}</Text>
+        <Display>{title}</Display>
+        <Typography>{subtitle}</Typography>
         <LinkButton href={link.href}>{link.label}</LinkButton>
       </div>
     </section>

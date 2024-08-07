@@ -1,5 +1,8 @@
 import { cx } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
+import { Button } from "../Button";
+import Display from "../Display";
+import X from "../Icons/X";
 import {
   asideStyle,
   centerStyle,
@@ -8,9 +11,6 @@ import {
   headerStyle,
   sectionStyle,
 } from "./styles";
-import X from "../Icons/X";
-import Headline from "../Typography/Headline";
-import { Button } from "../Button";
 
 type Props = {
   ref: string;
@@ -28,7 +28,7 @@ export default function Dialog({
     <dialog x-ref={ref} class={getDialogStyle(type)}>
       <div class={contentStyle}>
         <header class={headerStyle}>
-          <Headline as="h3">{title}</Headline>
+          <Display as="h3">{title}</Display>
           <Button
             size="small"
             x-on:click="$refs.dialogRef.close()"

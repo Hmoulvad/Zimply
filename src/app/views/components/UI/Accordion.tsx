@@ -1,6 +1,6 @@
 import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
-import Text from "./Typography/Text";
+import Typography from "./Typography";
 
 type Props = {
   title: string;
@@ -9,9 +9,9 @@ type Props = {
 export default function Accordion({ title, children }: Props) {
   return (
     <details class={detailsStyle}>
-      <Text as="summary" className={summaryStyle}>
+      <Typography as="summary" className={summaryStyle}>
         {title}
-      </Text>
+      </Typography>
       {children}
     </details>
   );

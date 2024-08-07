@@ -1,7 +1,7 @@
 import { cx } from "hono/css";
 import { JSX } from "hono/jsx";
 import Spinner from "../Icons/Spinner";
-import Text from "../Typography/Text";
+import Typography from "../Typography";
 import {
   baseStyle,
   disabledStyle,
@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import { ButtonProps } from "./types";
 
-type Props = ButtonProps & JSX.HTMLAttributes;
+type Props = ButtonProps & JSX.HTMLAttributes & HtmxAttributes;
 
 export default function Button({
   children,
@@ -37,9 +37,9 @@ export default function Button({
       ) : (
         <>
           {children ? (
-            <Text as="span" variant="body">
+            <Typography as="span" variant="body">
               {children}
-            </Text>
+            </Typography>
           ) : null}
           {icon ? icon : null}
         </>

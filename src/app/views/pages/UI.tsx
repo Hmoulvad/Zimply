@@ -3,26 +3,26 @@ import { Button } from "app/views/components/UI/Button";
 import Dialog from "app/views/components/UI/Dialog/Dialog";
 import ArrowRight from "app/views/components/UI/Icons/ArrowRight";
 import Select from "app/views/components/UI/Select";
-import Headline from "app/views/components/UI/Typography/Headline";
-import Text from "app/views/components/UI/Typography/Text";
 import RootLayout from "app/views/layout/Root";
 import { css } from "hono/css";
+import Display from "../components/UI/Display";
+import Typography from "../components/UI/Typography";
 
 export default function UIPage() {
   return (
     <RootLayout title="UIPage">
       <main class={mainStyle}>
         <section class={sectionStyle}>
-          <Headline as="h1">Display1</Headline>
-          <Headline as="h2">Display2</Headline>
-          <Headline as="h3">Display3</Headline>
-          <Headline as="h4">Display4</Headline>
-          <Headline as="h5">Display5</Headline>
-          <Headline as="h6">Display6</Headline>
+          <Display as="h1">Display1</Display>
+          <Display as="h2">Display2</Display>
+          <Display as="h3">Display3</Display>
+          <Display as="h4">Display4</Display>
+          <Display as="h5">Display5</Display>
+          <Display as="h6">Display6</Display>
         </section>
         <section class={sectionStyle}>
-          <Text variant="body">Body</Text>
-          <Text variant="label">Label</Text>
+          <Typography variant="body">Body</Typography>
+          <Typography variant="label">Label</Typography>
         </section>
         <section class={sectionStyle}>
           <Select

@@ -7,7 +7,7 @@ type Props = {
   variant?: "body" | "label";
 } & PropsWithChildren;
 
-export default function Text({
+export default function Typography({
   as,
   variant,
   className,

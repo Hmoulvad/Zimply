@@ -1,6 +1,6 @@
 import { css } from "hono/css";
 import ChevronDown from "./Icons/Chevron/Down";
-import Text from "./Typography/Text";
+import Typography from "./Typography";
 
 type Props = {
   options: string[];
@@ -10,9 +10,9 @@ type Props = {
 export default function Select({ options, label }: Props) {
   return (
     <div class={containerStyle}>
-      <Text className={labelStyle} as="label" variant="label">
+      <Typography className={labelStyle} as="label" variant="label">
         {label}
-      </Text>
+      </Typography>
       <select class={selectStyle}>
         {options.map((option) => (
           <option>{option}</option>
