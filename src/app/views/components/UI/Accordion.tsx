@@ -19,10 +19,15 @@ export default function Accordion({ title, children }: Props) {
 
 const detailsStyle = css`
   width: fit-content;
-  border: var(--border-size-1) solid black;
+  border-width: var(--border-size-1);
+  border-style: solid;
   padding: var(--size-2);
   min-height: calc(var(--size-7) + var(--size-2));
   border-radius: var(--radius-2);
+
+  &:hover {
+    background-color: var(--gray-9);
+  }
 
   &[open] {
     summary {

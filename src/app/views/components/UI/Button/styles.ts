@@ -9,20 +9,20 @@ export const baseStyle = css`
   width: fit-content;
   background-color: transparent;
   border-radius: var(--radius-2);
-  border: var(--border-size-1) solid black;
+  border-width: var(--border-size-1);
+  border-style: solid;
   transition: background-color 0.2s ease;
   gap: var(--size-2);
-  color: black;
+  color: inherit;
   text-decoration: none;
 
   &:hover {
-    background-color: var(--gray-2);
+    background-color: var(--gray-9);
   }
 `;
 
 export const smallStyle = css`
   height: var(--size-7);
-
   > svg {
     height: var(--size-4);
     width: var(--size-4);
@@ -31,7 +31,6 @@ export const smallStyle = css`
 
 export const mediumStyle = css`
   height: calc(var(--size-7) + var(--size-2));
-
   svg {
     height: var(--size-5);
     width: var(--size-5);
@@ -40,7 +39,6 @@ export const mediumStyle = css`
 
 export const largeStyle = css`
   height: calc(var(--size-7) + var(--size-3));
-
   svg {
     height: var(--size-6);
     width: var(--size-6);
@@ -53,7 +51,7 @@ export const flexReverseStyle = css`
 
 export const disabledStyle = css`
   cursor: default;
-  background-color: var(--gray-3);
+  background-color: var(--gray-1);
 `;
 
 export const fillStyle = css`

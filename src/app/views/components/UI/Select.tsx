@@ -27,6 +27,10 @@ const containerStyle = css`
   position: relative;
   width: fit-content;
 
+  &:hover {
+    background-color: var(--gray-9);
+  }
+
   & > svg {
     width: var(--size-4);
     height: var(--size-4);
@@ -43,9 +47,12 @@ const selectStyle = css`
   padding-top: var(--size-3);
   appearance: none;
   background-color: transparent;
-  border: var(--border-size-1) solid black;
+  border-width: var(--border-size-1);
+  border-style: solid;
+  border-color: white;
   border-radius: var(--radius-2);
   min-width: var(--size-13);
+  cursor: pointer;
 `;
 
 const labelStyle = css`
