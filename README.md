@@ -5,12 +5,9 @@ This project leverages the power of [Hono](https://hono.dev/), [HTMX](https://ht
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
+- [Development](#development)
 - [Scripts](#scripts)
-- [Dependencies](#dependencies)
-- [DevDependencies](#devdependencies)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
@@ -23,9 +20,7 @@ cd <project-directory>
 bun install
 ```
 
-## Usage
-
-### Development
+## Development
 
 To start the development server with hot reloading, run:
 
@@ -33,7 +28,13 @@ To start the development server with hot reloading, run:
 bun run dev
 ```
 
-### Testing
+## Scripts
+
+- `dev`: Runs the development server with hot reloading.
+- `test`: Runs the test suite.
+- `deploy`: Deploys the application to Cloudflare Workers with minification.
+
+## Testing
 
 To run the test suite, use:
 
@@ -41,19 +42,13 @@ To run the test suite, use:
 bun test
 ```
 
-### Deployment
+## Deployment
 
 To deploy the application using Cloudflare Wrangler, execute:
 
 ```bash
 bun run deploy
 ```
-
-## Scripts
-
-- `dev`: Runs the development server with hot reloading.
-- `test`: Runs the test suite.
-- `deploy`: Deploys the application to Cloudflare Workers with minification.
 
 ## License
 
