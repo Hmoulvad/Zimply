@@ -13,7 +13,6 @@ export const dialogStyle = css`
   display: grid;
   position: fixed;
   inset: 0;
-  background-color: white;
   border: none;
   max-height: 100vh;
   padding: var(--size-3);
