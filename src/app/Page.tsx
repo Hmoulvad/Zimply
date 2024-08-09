@@ -1,5 +1,5 @@
-import { Button } from "../_components/UI/Button";
-import RootLayout from "../_layout/Root";
+import { Button } from "./_components/UI/Button";
+import RootLayout from "./Layout";
 
 export default function HomePage() {
   return (

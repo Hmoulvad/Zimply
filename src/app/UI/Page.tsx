@@ -3,10 +3,10 @@ import { Button } from "app/_components/UI/Button";
 import Dialog from "app/_components/UI/Dialog/Dialog";
 import ArrowRight from "app/_components/UI/Icons/ArrowRight";
 import Select from "app/_components/UI/Select";
-import RootLayout from "app/_layout/Root";
 import { css } from "hono/css";
 import Display from "../_components/UI/Display";
 import Typography from "../_components/UI/Typography";
+import RootLayout from "app/Layout";
 
 export default function UIPage() {
   return (
