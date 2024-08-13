@@ -68,6 +68,7 @@ export default function StyleSheets() {
           display: grid;
           grid-template-rows: auto 1fr auto;
           gap: var(--size-2);
+          height: 100vh;
         }
 
         main {
