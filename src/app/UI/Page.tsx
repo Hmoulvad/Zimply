@@ -31,18 +31,11 @@ export default function UIPage() {
       <section class={sectionStyle}>
         <Button size="small">Button Small</Button>
         <Button size="medium">Button Medium</Button>
-        <Button size="large">Button Large</Button>
-        <Button isLoading size="small" />
-        <Button isLoading size="medium" />
-        <Button isLoading size="large" />
         <Button icon={<ArrowRight />} size="small">
           Button Small
         </Button>
         <Button icon={<ArrowRight />} size="medium">
           Button Medium
-        </Button>
-        <Button icon={<ArrowRight />} size="large">
-          Button Large
         </Button>
       </section>
       <section class={sectionStyle}>

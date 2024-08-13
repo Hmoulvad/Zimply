@@ -22,8 +22,7 @@ const detailsStyle = css`
   border-width: var(--border-size-1);
   border-style: solid;
   padding: var(--size-2);
-  min-height: calc(var(--size-7) + var(--size-2));
-  border-radius: var(--radius-2);
+  min-height: var(--size-8);
 
   &:hover {
     background-color: var(--gray-9);

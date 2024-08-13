@@ -4,6 +4,5 @@ export type ButtonProps = PropsWithChildren<{
   fill?: boolean;
   icon?: Child;
   iconPosition?: "left" | "right";
-  size?: "small" | "medium" | "large";
-  isLoading?: boolean;
+  size?: "small" | "medium";
 }>;

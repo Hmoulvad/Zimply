@@ -50,7 +50,6 @@ const selectStyle = css`
   border-width: var(--border-size-1);
   border-style: solid;
   border-color: white;
-  border-radius: var(--radius-2);
   min-width: var(--size-13);
   cursor: pointer;
 `;

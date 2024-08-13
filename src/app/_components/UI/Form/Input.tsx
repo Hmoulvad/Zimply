@@ -10,9 +10,21 @@ export default function Input({ label, ...rest }: Props) {
   return (
     <Typography as="label" className={labelStyle}>
       <Typography htmlFor={rest.name}>{label}</Typography>
-      <Typography as="input" {...rest} />
+      <Typography className={inputStyle} as="input" {...rest} />
     </Typography>
   );
 }
 
-const labelStyle = css``;
+const labelStyle = css`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
+`;
+
+const inputStyle = css`
+  height: var(--size-8);
+  padding-inline: var(--size-3);
+  border: var(--border-size-1) solid white;
+  background-color: transparent;
+`;
