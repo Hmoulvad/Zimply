@@ -1,6 +1,6 @@
 import { css } from "hono/css";
-import { Button } from "./_components/UI/Button";
-import Input from "./_components/UI/Form/Input";
+import { Button } from "../components/UI/Button";
+import Input from "../components/UI/Form/Input";
 
 export default function HomePage() {
   return (
