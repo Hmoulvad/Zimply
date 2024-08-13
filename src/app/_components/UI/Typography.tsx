@@ -1,19 +1,18 @@
 import { css, cx } from "hono/css";
 import type { JSX, PropsWithChildren } from "hono/jsx";
 
-type Props = {
-  as?: keyof JSX.IntrinsicElements;
+type Props<T extends keyof JSX.IntrinsicElements> = {
+  as?: T;
   className?: Promise<string>;
   variant?: "body" | "label";
-} & PropsWithChildren;
-
-export default function Typography({
+} & PropsWithChildren<JSX.IntrinsicElements[T]>;
+export default function Typography<T extends keyof JSX.IntrinsicElements>({
   as,
   variant,
   className,
   children,
   ...rest
-}: Props) {
+}: Props<T>) {
   const Element = as ?? "p";
 
   return (
@@ -24,8 +23,8 @@ export default function Typography({
 }
 
 function getVariantStyle(
-  variant: Props["variant"],
-  className: Props["className"]
+  variant: Props<keyof JSX.IntrinsicElements>["variant"],
+  className: Props<keyof JSX.IntrinsicElements>["className"]
 ) {
   let args = [baseStyle];
   switch (variant) {

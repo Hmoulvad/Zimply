@@ -1,9 +1,9 @@
-import { PropsWithChildren } from "hono/jsx";
+import { Child, PropsWithChildren } from "hono/jsx";
 
-export type ButtonProps = {
+export type ButtonProps = PropsWithChildren<{
   fill?: boolean;
-  icon?: JSX.Element;
+  icon?: Child;
   iconPosition?: "left" | "right";
   size?: "small" | "medium" | "large";
   isLoading?: boolean;
-} & PropsWithChildren;
+}>;

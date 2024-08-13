@@ -4,9 +4,9 @@ import Scripts from "app/_components/Scripts";
 import StyleSheets from "app/_components/StyleSheet";
 import type { PropsWithChildren } from "hono/jsx";
 
-type Props = {
+type Props = PropsWithChildren<{
   title: string;
-} & PropsWithChildren;
+}>;
 
 export default function RootLayout({ children, title }: Props) {
   return (

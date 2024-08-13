@@ -2,7 +2,7 @@ import { css, cx } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
 import { JSX } from "hono/jsx";
 
-type Props = {
+type Props = PropsWithChildren<{
   as?: keyof JSX.IntrinsicElements;
   variant?:
     | "display1"
@@ -11,7 +11,7 @@ type Props = {
     | "display4"
     | "display5"
     | "display6";
-} & PropsWithChildren;
+}>;
 
 export default function Display({ as, variant, children, ...rest }: Props) {
   const Element = as ?? "h2";

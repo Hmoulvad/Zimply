@@ -12,11 +12,11 @@ import {
   sectionStyle,
 } from "./styles";
 
-type Props = {
+type Props = PropsWithChildren<{
   ref: string;
   type?: "center" | "aside";
   title: string;
-} & PropsWithChildren;
+}>;
 
 export default function Dialog({
   children,

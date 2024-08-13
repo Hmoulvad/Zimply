@@ -1,6 +1,5 @@
-import Users from "app/_views/Users";
 import { Hono } from "hono";
-import executeWithDatabase from "./utils/executeWithDatabase";
+import userRoutes from "./users";
 
 const apiRoutes = new Hono();
 
@@ -8,15 +7,6 @@ apiRoutes
   .get("/", (c) => {
     return c.html("Hello, World!");
   })
-  .get("/users", (c) => {
-    const users = executeWithDatabase(
-      (db) =>
-        db.query("SELECT * FROM users;").all() as [
-          { id: number; name: string; email: string }
-        ]
-    );
-
-    return c.html(<Users users={users} />);
-  });
+  .route("/users", userRoutes);
 
 export default apiRoutes;

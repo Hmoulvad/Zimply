@@ -1,9 +1,9 @@
 import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
 
-type Column = {
+type Column = PropsWithChildren<{
   span: 3 | 4 | 6 | 8 | 12;
-} & PropsWithChildren;
+}>;
 
 type Props = {
   columns: Column[];

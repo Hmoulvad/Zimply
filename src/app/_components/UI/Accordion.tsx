@@ -2,9 +2,9 @@ import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
 import Typography from "./Typography";
 
-type Props = {
+type Props = PropsWithChildren<{
   title: string;
-} & PropsWithChildren;
+}>;
 
 export default function Accordion({ title, children }: Props) {
   return (

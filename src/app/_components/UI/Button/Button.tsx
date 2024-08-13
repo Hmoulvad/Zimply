@@ -14,7 +14,7 @@ import {
 } from "./styles";
 import { ButtonProps } from "./types";
 
-type Props = ButtonProps & JSX.HTMLAttributes & HtmxAttributes;
+type Props = ButtonProps & JSX.IntrinsicElements["button"];
 
 export default function Button({
   children,

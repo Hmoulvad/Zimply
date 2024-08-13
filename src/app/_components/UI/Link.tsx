@@ -2,7 +2,7 @@ import { css } from "hono/css";
 import type { JSX, PropsWithChildren } from "hono/jsx";
 import Typography from "./Typography";
 
-type Props = JSX.HTMLAttributes & PropsWithChildren;
+type Props = PropsWithChildren<JSX.IntrinsicElements["a"]>;
 
 export default function Link({ children, ...rest }: Props) {
   return (
