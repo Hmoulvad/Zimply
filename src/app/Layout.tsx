@@ -6,9 +6,10 @@ import type { PropsWithChildren } from "hono/jsx";
 
 type Props = PropsWithChildren<{
   title: string;
+  description: string;
 }>;
 
-export default function RootLayout({ children, title }: Props) {
+export default function RootLayout({ children, title, description }: Props) {
   return (
     <html lang="en">
       <head>
@@ -16,6 +17,7 @@ export default function RootLayout({ children, title }: Props) {
         <StyleSheets />
         <Scripts />
         <title>{title}</title>
+        <meta name="description" content={description} />
       </head>
       <body>
         <Header />

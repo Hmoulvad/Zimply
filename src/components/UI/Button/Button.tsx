@@ -15,10 +15,12 @@ export default function Button({
   disabled = false,
   ...rest
 }: Props) {
+  const fallbackLabel = typeof children === "string" ? children : undefined;
   return (
     <button
       class={getButtonStyle({ size, iconPosition, fill })}
       disabled={disabled}
+      aria-label={fallbackLabel}
       {...rest}
     >
       {children ? (

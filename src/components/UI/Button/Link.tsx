@@ -13,8 +13,13 @@ export default function LinkButton({
   size = "medium",
   ...rest
 }: Props) {
+  const fallbackTitle = typeof children === "string" ? children : undefined;
   return (
-    <a class={getButtonStyle({ size, iconPosition, fill })} {...rest}>
+    <a
+      title={fallbackTitle}
+      class={getButtonStyle({ size, iconPosition, fill })}
+      {...rest}
+    >
       {children ? (
         <Typography as="span" variant="body">
           {children}

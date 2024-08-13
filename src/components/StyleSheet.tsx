@@ -82,19 +82,19 @@ export default function StyleSheets() {
       {/* Open Props Variables */}
       <link
         rel="stylesheet"
-        href="https://unpkg.com/open-props/sizes.min.css"
+        href="https://unpkg.com/open-props@1.7.5/sizes.min.css"
       />
       <link
         rel="stylesheet"
-        href="https://unpkg.com/open-props/fonts.min.css"
+        href="https://unpkg.com/open-props@1.7.5/fonts.min.css"
       />
       <link
         rel="stylesheet"
-        href="https://unpkg.com/open-props/colors.min.css"
+        href="https://unpkg.com/open-props@1.7.5/colors.min.css"
       />
       <link
         rel="stylesheet"
-        href="https://unpkg.com/open-props/borders.min.css"
+        href="https://unpkg.com/open-props@1.7.5/borders.min.css"
       />
       {/* Hono CSS */}
       <Style />

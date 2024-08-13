@@ -5,8 +5,9 @@ import Typography from "./Typography";
 type Props = PropsWithChildren<JSX.IntrinsicElements["a"]>;
 
 export default function Link({ children, ...rest }: Props) {
+  const fallbackTitle = typeof children === "string" ? children : undefined;
   return (
-    <a class={baseStyle} {...rest}>
+    <a title={fallbackTitle} class={baseStyle} {...rest}>
       <Typography as="span">{children}</Typography>
     </a>
   );
