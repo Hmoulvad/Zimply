@@ -1,11 +1,17 @@
 import { css } from "hono/css";
 
-export default function Users() {
+type Props = {
+  users: { id: number; name: string; email: string }[];
+};
+
+export default function Users({ users }: Props) {
   return (
     <ul class={listStyle}>
-      <li>User1</li>
-      <li>User2</li>
-      <li>User3</li>
+      {users.map((user) => (
+        <li key={user.id}>
+          {user.name} ({user.email})
+        </li>
+      ))}
     </ul>
   );
 }
