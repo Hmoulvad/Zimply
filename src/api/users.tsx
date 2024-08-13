@@ -1,4 +1,4 @@
-import Users from "app/_views/Users";
+import Users from "components/Users";
 import { Hono } from "hono";
 import executeWithDatabase from "./utils/executeWithDatabase";
 
