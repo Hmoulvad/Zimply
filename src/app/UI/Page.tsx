@@ -6,11 +6,10 @@ import Select from "app/_components/UI/Select";
 import { css } from "hono/css";
 import Display from "../_components/UI/Display";
 import Typography from "../_components/UI/Typography";
-import RootLayout from "app/Layout";
 
 export default function UIPage() {
   return (
-    <RootLayout title="UIPage">
+    <>
       <section class={sectionStyle}>
         <Display as="h1">Display1</Display>
         <Display as="h2">Display2</Display>
@@ -55,7 +54,7 @@ export default function UIPage() {
         <Button x-on:click="$refs.dialogRef.showModal()">Open Dialog</Button>
         <Dialog title="AlpineJS Dialog" ref="dialogRef"></Dialog>
       </section>
-    </RootLayout>
+    </>
   );
 }
 

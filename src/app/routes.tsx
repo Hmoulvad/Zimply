@@ -4,6 +4,7 @@ import UIPage from "./UI/Page";
 
 const appRoutes = new Hono();
 
+// Routes
 appRoutes.get("/", (c) => {
   return c.html(<HomePage />);
 });

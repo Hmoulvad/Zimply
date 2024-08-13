@@ -1,8 +1,8 @@
 import Footer from "app/_components/Footer";
 import Header from "app/_components/Header";
-import type { PropsWithChildren } from "hono/jsx";
-import StyleSheets from "app/_components/StyleSheet";
 import Scripts from "app/_components/Scripts";
+import StyleSheets from "app/_components/StyleSheet";
+import type { PropsWithChildren } from "hono/jsx";
 
 type Props = {
   title: string;
@@ -10,8 +10,9 @@ type Props = {
 
 export default function RootLayout({ children, title }: Props) {
   return (
-    <html>
+    <html lang="en">
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <StyleSheets />
         <Scripts />
         <title>{title}</title>
