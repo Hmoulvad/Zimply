@@ -6,25 +6,24 @@ import UIPage from "./UI/Page";
 
 const appRoutes = new Hono();
 
-// Middleware to add the RootLayout to all routes
-appRoutes.use(
-  "*",
-  jsxRenderer(({ children, title }) => {
-    return <RootLayout title={title}>{children}</RootLayout>;
+appRoutes
+  // Middleware to add the RootLayout to all routes
+  .use(
+    "*",
+    jsxRenderer(({ children, title }) => {
+      return <RootLayout title={title}>{children}</RootLayout>;
+    })
+  )
+  // Routes
+  .get("/", (c) => {
+    return c.render(<HomePage />, {
+      title: "Home Page",
+    });
   })
-);
-
-// Routes
-appRoutes.get("/", (c) => {
-  return c.render(<HomePage />, {
-    title: "Home Page",
+  .get("/ui", (c) => {
+    return c.render(<UIPage />, {
+      title: "UI Page",
+    });
   });
-});
-
-appRoutes.get("/ui", (c) => {
-  return c.render(<UIPage />, {
-    title: "UI Page",
-  });
-});
 
 export default appRoutes;

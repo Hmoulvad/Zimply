@@ -4,7 +4,6 @@ import { Hono } from "hono";
 
 const app = new Hono();
 
-app.route("/", appRoutes);
-app.route("/api", apiRoutes);
+app.route("/", appRoutes).route("/api", apiRoutes);
 
 export default app;
