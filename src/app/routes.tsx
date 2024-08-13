@@ -1,4 +1,5 @@
 import { Hono } from "hono";
+import { jsxRenderer } from "hono/jsx-renderer";
 import RootLayout from "./Layout";
 import HomePage from "./Page";
 import UIPage from "./UI/Page";
@@ -6,12 +7,12 @@ import UIPage from "./UI/Page";
 const appRoutes = new Hono();
 
 // Middleware to add the RootLayout to all routes
-appRoutes.use("*", async (c, next) => {
-  c.setRenderer((content, head) => {
-    return c.html(<RootLayout title={head.title}>{content}</RootLayout>);
-  });
-  await next();
-});
+appRoutes.use(
+  "*",
+  jsxRenderer(({ children, title }) => {
+    return <RootLayout title={title}>{children}</RootLayout>;
+  })
+);
 
 // Routes
 appRoutes.get("/", (c) => {
