@@ -46,7 +46,7 @@ export default function StyleSheets() {
         @media (prefers-reduced-motion: no-preference) {
           :has(:target) {
             scroll-behavior: smooth;
-            scroll-padding-top: var(--space-08);
+            scroll-padding-top: var(--size-9);
           }
         }
 
