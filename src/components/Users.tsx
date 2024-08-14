@@ -1,7 +1,7 @@
 import { css } from "hono/css";
 
 type Props = {
-  users: { id: number; name: string; email: string }[];
+  users: User[];
 };
 
 export default function Users({ users }: Props) {

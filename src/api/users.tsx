@@ -7,10 +7,7 @@ const userRoutes = new Hono();
 userRoutes
   .get("/all", (c) => {
     const users = executeWithDatabase(
-      (db) =>
-        db.prepare("SELECT * FROM users;").all() as [
-          { id: number; name: string; email: string }
-        ]
+      (db) => db.prepare("SELECT * FROM users;").all() as User[]
     );
     return c.html(<Users users={users} />);
   })
