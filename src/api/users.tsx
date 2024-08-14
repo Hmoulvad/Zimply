@@ -7,7 +7,7 @@ const userRoutes = new Hono();
 userRoutes
   .get("/all", (c) => {
     const users = executeWithDatabase(
-      (db) => db.prepare("SELECT * FROM users;").all() as User[]
+      (db) => db.query("SELECT * FROM users;").all() as User[]
     );
     return c.html(<Users users={users} />);
   })
@@ -17,7 +17,7 @@ userRoutes
       email: string;
     };
     executeWithDatabase((db) => {
-      db.prepare("INSERT INTO users (name, email) VALUES (?, ?);").run(
+      db.query("INSERT INTO users (name, email) VALUES (?, ?);").run(
         name,
         email
       );
