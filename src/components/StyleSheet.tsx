@@ -6,33 +6,22 @@ export default function StyleSheets() {
       {/* Global styles */}
       <style>
         {`
-        /* makes sizing simpler */
         *,
         *::before,
         *::after {
           box-sizing: border-box;
         }
 
-        /* remove default spacing */
-        /* force styling  */
         * {
           padding: 0;
           margin: 0;
-          font-family: system-ui, sans-serif;
+          font-family: var(--font-system-ui);
         }
 
-        /* dark mode user-agent-styles */
         html {
           color-scheme: dark light;
         }
 
-        * {
-          padding: 0;
-          margin: 0;
-          font-family: system-ui, sans-serif;
-        }
-
-        /* responsive images/videos */
         img,
         picture,
         svg,
@@ -41,7 +30,6 @@ export default function StyleSheets() {
           max-width: 100%;
         }
 
-        /* adding text-wrap balance to headlines */
         h1,
         h2,
         h3,
@@ -51,12 +39,10 @@ export default function StyleSheets() {
           text-wrap: balance;
         }
 
-        /* adding text-wrap pretty to paragraphs */
         p {
           text-wrap: pretty;
         }
 
-        /* adding scroll behaviour smooth if reduced motion isn't selected */
         @media (prefers-reduced-motion: no-preference) {
           :has(:target) {
             scroll-behavior: smooth;
