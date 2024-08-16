@@ -1,5 +1,5 @@
+import Link from "components/UI/Link";
 import { css } from "hono/css";
-import Link from "./UI/Link";
 
 export default function Header() {
   return (

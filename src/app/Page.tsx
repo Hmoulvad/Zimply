@@ -1,7 +1,7 @@
+import Button from "components/UI/Button/Button";
 import Display from "components/UI/Display";
 import { css } from "hono/css";
 import generateHTMXAttributes from "utils/generateHTMXAttributes";
-import { Button } from "../components/UI/Button";
 import Input from "../components/UI/Form/Input";
 
 export default function HomePage() {
