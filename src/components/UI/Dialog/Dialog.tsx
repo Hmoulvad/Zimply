@@ -1,6 +1,5 @@
 import { cx } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
-import { Button } from "../Button";
 import Display from "../Display";
 import X from "../Icons/X";
 import {
@@ -11,6 +10,7 @@ import {
   headerStyle,
   sectionStyle,
 } from "./styles";
+import Button from "../Button/Button";
 
 type Props = PropsWithChildren<{
   ref: string;
