@@ -2,6 +2,7 @@
   "scripts": {
     "dev": "bun run --hot src/index.ts",
     "test": "bun test index.test.ts",
+    "build": "bun build --target=bun src/index.ts --outdir dist",
     "deploy": "wrangler deploy --minify src/index.ts"
   },
   "dependencies": {
