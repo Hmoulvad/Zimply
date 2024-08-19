@@ -1,11 +1,11 @@
 import Accordion from "components/UI/Accordion";
 import Button from "components/UI/Button/Button";
 import Dialog from "components/UI/Dialog/Dialog";
+import Display from "components/UI/Display";
 import ArrowRight from "components/UI/Icons/Arrow/Right";
 import Select from "components/UI/Select";
+import Typography from "components/UI/Typography";
 import { css } from "hono/css";
-import Display from "../../components/UI/Display";
-import Typography from "../../components/UI/Typography";
 
 export default function UIPage() {
   return (
@@ -45,7 +45,7 @@ export default function UIPage() {
       </section>
       <section x-data class={sectionStyle}>
         <Button x-on:click="$refs.dialogRef.showModal()">Open Dialog</Button>
-        <Dialog title="AlpineJS Dialog" ref="dialogRef"></Dialog>
+        <Dialog type="aside" title="AlpineJS Dialog" ref="dialogRef"></Dialog>
       </section>
     </>
   );
