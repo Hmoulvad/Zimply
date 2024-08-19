@@ -2,7 +2,9 @@ import "typed-htmx";
 
 declare module "hono/jsx" {
   namespace JSX {
-    interface HTMLAttributes extends HtmxAttributes {}
+    interface HTMLAttributes extends HtmxAttributes {
+      children?: Child;
+    }
   }
 }
 declare module "hono" {

@@ -1,4 +1,4 @@
-import { Child, PropsWithChildren } from "hono/jsx";
+import type { Child, PropsWithChildren } from "hono/jsx";
 
 export type ButtonProps = PropsWithChildren<{
   fill?: boolean;

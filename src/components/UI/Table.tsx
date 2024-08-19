@@ -1,6 +1,6 @@
-import { Child } from "hono/jsx";
-import Typography from "./Typography";
 import { css, cx } from "hono/css";
+import type { Child } from "hono/jsx";
+import Typography from "./Typography";
 
 type Column<T> = {
   label: Child | string;

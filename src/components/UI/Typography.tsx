@@ -6,6 +6,7 @@ type Props<T extends keyof JSX.IntrinsicElements> = {
   className?: Promise<string>;
   variant?: "body" | "label";
 } & PropsWithChildren<JSX.IntrinsicElements[T]>;
+
 export default function Typography<T extends keyof JSX.IntrinsicElements>({
   as,
   variant,

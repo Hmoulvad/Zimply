@@ -1,7 +1,7 @@
-import { JSX } from "hono/jsx";
+import type { JSX } from "hono/jsx";
 import Typography from "../Typography";
 import { getButtonStyle } from "./styles";
-import { ButtonProps } from "./types";
+import type { ButtonProps } from "./types";
 
 type Props = ButtonProps & JSX.HTMLAttributes["a"];
 

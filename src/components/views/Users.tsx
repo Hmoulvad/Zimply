@@ -1,4 +1,5 @@
 import { css } from "hono/css";
+import type { User } from "types";
 
 type Props = {
   users: User[];

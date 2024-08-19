@@ -1,8 +1,7 @@
 import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
-import Typography from "./Typography";
-import ArrowDown from "./Icons/Arrow/Down";
 import ChevronDown from "./Icons/Chevron/Down";
+import Typography from "./Typography";
 
 type Props = PropsWithChildren<{
   title: string;

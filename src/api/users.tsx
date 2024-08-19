@@ -1,5 +1,6 @@
 import Users from "components/views/Users";
 import { Hono } from "hono";
+import type { User } from "types";
 import executeWithDatabase from "./utils/executeWithDatabase";
 
 const userRoutes = new Hono();

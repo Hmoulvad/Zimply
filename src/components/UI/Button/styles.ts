@@ -1,5 +1,5 @@
 import { css, cx } from "hono/css";
-import { ButtonProps } from "./types";
+import type { ButtonProps } from "./types";
 
 export function getButtonStyle({
   size,

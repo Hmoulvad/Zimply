@@ -1,5 +1,5 @@
 import { css } from "hono/css";
-import { JSX } from "hono/jsx";
+import type { JSX } from "hono/jsx";
 import Typography from "../Typography";
 
 type Props = {

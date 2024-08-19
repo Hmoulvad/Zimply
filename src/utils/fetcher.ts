@@ -8,6 +8,6 @@ export default async function fetcher<T>(
     throw new Error(`HTTP error! status: ${response.status}`);
   }
 
-  const data: T = await response.json();
+  const data = (await response.json()) as T;
   return data;
 }

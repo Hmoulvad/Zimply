@@ -1,6 +1,5 @@
 import { css, cx } from "hono/css";
-import type { PropsWithChildren } from "hono/jsx";
-import { JSX } from "hono/jsx";
+import type { JSX, PropsWithChildren } from "hono/jsx";
 
 type Props = PropsWithChildren<{
   as?: keyof JSX.IntrinsicElements;
