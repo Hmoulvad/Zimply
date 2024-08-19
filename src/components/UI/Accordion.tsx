@@ -1,6 +1,8 @@
 import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
 import Typography from "./Typography";
+import ArrowDown from "./Icons/Arrow/Down";
+import ChevronDown from "./Icons/Chevron/Down";
 
 type Props = PropsWithChildren<{
   title: string;
@@ -11,6 +13,7 @@ export default function Accordion({ title, children }: Props) {
     <details class={detailsStyle}>
       <Typography as="summary" className={summaryStyle}>
         {title}
+        <ChevronDown />
       </Typography>
       {children}
     </details>
@@ -31,6 +34,10 @@ const detailsStyle = css`
   &[open] {
     summary {
       margin-bottom: 0;
+
+      & > svg {
+        transform: rotate(180deg);
+      }
     }
   }
 `;
@@ -41,6 +48,17 @@ const summaryStyle = css`
   display: block;
   cursor: pointer;
   transition: margin 0.5s ease-in-out;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--size-2);
+
+  & > svg {
+    height: var(--size-4);
+    width: var(--size-4);
+    transform: rotate(0deg);
+    transition: transform 0.5s ease-in-out;
+  }
 
   &::marker {
     display: none;
