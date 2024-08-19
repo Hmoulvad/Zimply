@@ -11,6 +11,9 @@ export default function Header() {
         <li>
           <Link href="/ui">UI</Link>
         </li>
+        <li>
+          <Link href="/battlenet">API</Link>
+        </li>
       </ul>
     </header>
   );

@@ -15,3 +15,10 @@ declare module "hono" {
     ): Response;
   }
 }
+
+declare module "bun" {
+  interface Env {
+    BATTLENET_CLIENT_ID: string;
+    BATTLENET_CLIENT_SECRET: string;
+  }
+}

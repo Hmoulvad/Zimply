@@ -3,6 +3,7 @@ import { jsxRenderer } from "hono/jsx-renderer";
 import RootLayout from "./layout";
 import HomePage from "./page";
 import UIPage from "./ui/page";
+import BattlenetPage from "./battlenet/page";
 
 const appRoutes = new Hono();
 
@@ -19,17 +20,23 @@ appRoutes
     })
   )
   // Routes
-  .get("/", (c) => {
-    return c.render(<HomePage />, {
+  .get("/", (c) =>
+    c.render(<HomePage />, {
       title: "Home Page",
       description: "This is the home page",
-    });
-  })
-  .get("/ui", (c) => {
-    return c.render(<UIPage />, {
+    })
+  )
+  .get("/ui", (c) =>
+    c.render(<UIPage />, {
       title: "UI Page",
       description: "This is the UI page",
-    });
-  });
+    })
+  )
+  .get("/battlenet", (c) =>
+    c.render(<BattlenetPage />, {
+      title: "Battle.net API",
+      description: "This is the Battle.net API page",
+    })
+  );
 
 export default appRoutes;
