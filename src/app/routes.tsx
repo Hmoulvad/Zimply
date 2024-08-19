@@ -1,8 +1,8 @@
 import { Hono } from "hono";
 import { jsxRenderer } from "hono/jsx-renderer";
-import RootLayout from "./Layout";
-import HomePage from "./Page";
-import UIPage from "./UI/Page";
+import RootLayout from "./layout";
+import HomePage from "./page";
+import UIPage from "./ui/page";
 
 const appRoutes = new Hono();
 
