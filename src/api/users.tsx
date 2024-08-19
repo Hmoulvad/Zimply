@@ -1,6 +1,6 @@
 import Users from "components/views/Users";
 import { Hono } from "hono";
-import type { User } from "types";
+import type { DatabaseTypes } from "types/databaseTypes";
 import executeWithDatabase from "./utils/executeWithDatabase";
 
 const userRoutes = new Hono();
@@ -8,7 +8,7 @@ const userRoutes = new Hono();
 userRoutes
   .get("/all", (c) => {
     const users = executeWithDatabase((db) =>
-      db.query<User, []>("SELECT * FROM users;").all()
+      db.query<DatabaseTypes.User, []>("SELECT * FROM users;").all()
     );
     return c.html(<Users users={users} />);
   })

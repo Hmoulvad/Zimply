@@ -1,17 +1,12 @@
 import Typography from "components/UI/Typography";
 import { Hono } from "hono";
-import getBattlenetToken from "./utils/getBattlenetToken";
+import { getPlayableClass } from "./actions/wow";
 
 const battlenetRoutes = new Hono();
 
-battlenetRoutes.get("/auth", async (c) => {
-  const token = await getBattlenetToken();
-  return c.html(
-    <Typography>
-      <h1>Auth</h1>
-      <p>{token}</p>
-    </Typography>
-  );
+battlenetRoutes.get("/wow/classes", async (c) => {
+  const playbleClass = await getPlayableClass(3);
+  return c.html(<Typography>{JSON.stringify(playbleClass)}</Typography>);
 });
 
 export default battlenetRoutes;

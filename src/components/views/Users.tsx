@@ -1,8 +1,8 @@
 import { css } from "hono/css";
-import type { User } from "types";
+import type { DatabaseTypes } from "types/databaseTypes";
 
 type Props = {
-  users: User[];
+  users: DatabaseTypes.User[];
 };
 
 export default function Users({ users }: Props) {

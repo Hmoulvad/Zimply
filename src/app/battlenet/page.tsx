@@ -2,17 +2,17 @@ import Button from "components/UI/Button/Button";
 import generateHTMXAttributes from "utils/generateHTMXAttributes";
 
 export default function BattlenetPage() {
-  const api = generateHTMXAttributes("user");
+  const battlenet = generateHTMXAttributes("battlenet");
   return (
     <>
       <Button
-        hx-get="/api/battlenet/auth"
+        hx-get="/api/battlenet/wow/classes"
         hx-swap="innerHTML"
-        hx-target={api["htmx-target"]}
+        hx-target={battlenet["htmx-target"]}
       >
-        Get API keys
+        Get Playable Classes
       </Button>
-      <div id={api["htmx-id"]}></div>
+      <div id={battlenet["htmx-id"]}></div>
     </>
   );
 }

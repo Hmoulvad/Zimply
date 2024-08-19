@@ -12,7 +12,7 @@ export default function Header() {
           <Link href="/ui">UI</Link>
         </li>
         <li>
-          <Link href="/battlenet">API</Link>
+          <Link href="/battlenet">Battlenet</Link>
         </li>
       </ul>
     </header>
