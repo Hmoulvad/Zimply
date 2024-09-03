@@ -3,7 +3,6 @@ import { jsxRenderer } from "hono/jsx-renderer";
 import RootLayout from "./layout";
 import HomePage from "./page";
 import UIPage from "./ui/page";
-import BattlenetPage from "./battlenet/page";
 
 const appRoutes = new Hono();
 
@@ -30,12 +29,6 @@ appRoutes
     c.render(<UIPage />, {
       title: "UI Page",
       description: "This is the UI page",
-    })
-  )
-  .get("/battlenet", (c) =>
-    c.render(<BattlenetPage />, {
-      title: "Battle.net API",
-      description: "This is the Battle.net API page",
     })
   );
 
