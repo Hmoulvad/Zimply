@@ -11,6 +11,9 @@ export default function Header() {
         <li>
           <Link href="/ui">UI</Link>
         </li>
+        <li>
+          <Link href="/form">Form</Link>
+        </li>
       </ul>
     </header>
   );

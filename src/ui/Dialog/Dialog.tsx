@@ -11,6 +11,7 @@ import {
   headerStyle,
   sectionStyle,
 } from "./styles";
+import generateID from "utils/generateID";
 
 type Props = PropsWithChildren<{
   ref: string;
@@ -24,11 +25,12 @@ export default function Dialog({
   type = "center",
   title,
 }: Props) {
+  const id = generateID(ref);
   return (
     <dialog
-      id="dialog"
+      id={id}
       x-ref={ref}
-      x-on:click={`$event.target.contains(dialog) ? $refs.${ref}?.close() : null`}
+      x-on:click={`$event.target.id === '${id}' ? $refs.${ref}?.close() : null`}
       class={getDialogStyle(type)}
     >
       <div class={contentStyle}>

@@ -3,6 +3,7 @@ import { jsxRenderer } from "hono/jsx-renderer";
 import RootLayout from "./layout";
 import HomePage from "./page";
 import UIPage from "./ui/page";
+import FormPage from "./form/page";
 
 const appRoutes = new Hono();
 
@@ -29,6 +30,12 @@ appRoutes
     c.render(<UIPage />, {
       title: "UI Page",
       description: "This is the UI page",
+    }),
+  )
+  .get("/form", (c) =>
+    c.render(<FormPage />, {
+      title: "Form Page",
+      description: "This is the Form page",
     }),
   );
 

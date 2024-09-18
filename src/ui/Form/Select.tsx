@@ -1,61 +1,51 @@
 import { css } from "hono/css";
 import ChevronDown from "ui/Icons/Chevron/Down";
 import Typography from "ui/Typography";
+import type { InputProps } from "./types";
 
 type Props = {
   options: string[];
-  label: string;
-};
+} & InputProps;
 
-export default function Select({ options, label }: Props) {
+export default function Select({ options, label, name }: Props) {
   return (
-    <div class={containerStyle}>
-      <Typography className={labelStyle} as="label" variant="label">
-        {label}
-      </Typography>
-      <select class={selectStyle}>
+    <label className={labelStyle}>
+      <Typography htmlFor={name}>{label}</Typography>
+      <Typography as="select" id={name} name={name}>
         {options.map((option) => (
-          <option>{option}</option>
+          <option key={option} value={option}>
+            {option}
+          </option>
         ))}
-      </select>
+      </Typography>
       <ChevronDown />
-    </div>
+    </label>
   );
 }
 
-const containerStyle = css`
+const labelStyle = css`
   position: relative;
-  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-2);
 
-  &:hover {
-    background-color: var(--gray-9);
+  & > select {
+    height: var(--size-8);
+    appearance: none;
+    padding-left: var(--size-3);
+    padding-right: calc(var(--size-3) * 2);
+    border: var(--border-size-1) solid white;
+    background-color: transparent;
+    cursor: pointer;
+    border-radius: 0;
   }
 
   & > svg {
     width: var(--size-4);
     height: var(--size-4);
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    bottom: var(--size-3);
     right: var(--size-2);
+    cursor: pointer;
   }
-`;
-
-const selectStyle = css`
-  height: var(--size-8);
-  padding-inline: var(--size-2);
-  padding-top: var(--size-3);
-  appearance: none;
-  background-color: transparent;
-  border-width: var(--border-size-1);
-  border-style: solid;
-  border-color: white;
-  min-width: var(--size-13);
-  cursor: pointer;
-`;
-
-const labelStyle = css`
-  position: absolute;
-  top: var(--size-1);
-  left: var(--size-2);
 `;
