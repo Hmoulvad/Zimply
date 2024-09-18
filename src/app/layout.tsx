@@ -1,8 +1,8 @@
-import Footer from "components/shell/Footer";
-import Header from "components/shell/Header";
-import Scripts from "components/shell/Scripts";
-import StyleSheets from "components/shell/StyleSheet";
 import type { PropsWithChildren } from "hono/jsx";
+import StyleSheets from "./_components/StyleSheet";
+import Scripts from "./_components/Scripts";
+import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 
 type Props = PropsWithChildren<{
   title: string;

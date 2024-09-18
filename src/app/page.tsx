@@ -1,5 +1,5 @@
-import Display from "components/UI/Display";
 import { css } from "hono/css";
+import Display from "ui/Display";
 
 export default function HomePage() {
   return (

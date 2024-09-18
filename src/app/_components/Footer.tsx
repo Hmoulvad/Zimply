@@ -1,6 +1,6 @@
 import type { PropsWithChildren } from "hono/jsx";
 import { css } from "hono/css";
-import Display from "components/UI/Display";
+import Display from "ui/Display";
 
 export default function Footer({}: PropsWithChildren) {
   return (
