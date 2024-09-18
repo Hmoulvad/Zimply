@@ -1,5 +1,7 @@
+import generateID from "./generateID";
+
 export default function generateHTMXAttributes(prefix = "id") {
-  const id = `${prefix}-${Math.random().toString(36).substr(2, 9)}`;
+  const id = generateID(prefix);
   return {
     ["htmx-id"]: id,
     ["htmx-target"]: `#${id}`,

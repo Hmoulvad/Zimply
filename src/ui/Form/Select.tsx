@@ -1,6 +1,6 @@
 import { css } from "hono/css";
-import ChevronDown from "./Icons/Chevron/Down";
-import Typography from "./Typography";
+import ChevronDown from "ui/Icons/Chevron/Down";
+import Typography from "ui/Typography";
 
 type Props = {
   options: string[];

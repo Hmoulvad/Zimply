@@ -25,13 +25,18 @@ export default function Dialog({
   title,
 }: Props) {
   return (
-    <dialog x-ref={ref} class={getDialogStyle(type)}>
+    <dialog
+      id="dialog"
+      x-ref={ref}
+      x-on:click={`$event.target.contains(dialog) ? $refs.${ref}?.close() : null`}
+      class={getDialogStyle(type)}
+    >
       <div class={contentStyle}>
         <header class={headerStyle}>
           <Display as="h3">{title}</Display>
           <Button
             size="small"
-            x-on:click="$refs.dialogRef.close()"
+            x-on:click={`$refs.${ref}?.close()`}
             icon={<X />}
           />
         </header>

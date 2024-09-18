@@ -3,8 +3,8 @@ import Accordion from "ui/Accordion";
 import Button from "ui/Button/Button";
 import Dialog from "ui/Dialog";
 import Display from "ui/Display";
+import Select from "ui/Form/Select";
 import ArrowRight from "ui/Icons/Arrow/Right";
-import Select from "ui/Select";
 import Typography from "ui/Typography";
 
 export default function UIPage() {

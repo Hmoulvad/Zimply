@@ -62,4 +62,8 @@ const summaryStyle = css`
   &::marker {
     display: none;
   }
+
+  &::-webkit-details-marker {
+    display: none;
+  }
 `;
