@@ -43,14 +43,14 @@ const labelStyles = css`
     width: 0;
   }
 
-  & > input:checked ~ .radio {
+  & > input:checked ~ span {
     background-color: white;
     & > svg {
       opacity: 1;
     }
   }
 
-  & > input:focus ~ .radio {
+  & > input:focus ~ span {
     outline: var(--border-size-3) auto -webkit-focus-ring-color;
   }
 `;

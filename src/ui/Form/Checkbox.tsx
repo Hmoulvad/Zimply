@@ -48,14 +48,14 @@ const labelStyle = css`
     width: 0;
   }
 
-  & > input:checked ~ .checkbox {
+  & > input:checked ~ span {
     background-color: white;
     & > svg {
       opacity: 1;
     }
   }
 
-  & > input:focus ~ .checkbox {
+  & > input:focus ~ span {
     outline: var(--border-size-3) auto -webkit-focus-ring-color;
   }
 `;
