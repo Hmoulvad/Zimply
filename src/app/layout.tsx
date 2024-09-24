@@ -14,10 +14,10 @@ export default function RootLayout({ children, title, description }: Props) {
     <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <StyleSheets />
-        <Scripts />
         <title>{title}</title>
         <meta name="description" content={description} />
+        <StyleSheets />
+        <Scripts />
       </head>
       <body>
         <Header />

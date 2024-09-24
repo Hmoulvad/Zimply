@@ -17,26 +17,26 @@ appRoutes
           {children}
         </RootLayout>
       );
-    }),
+    })
   )
   // Routes
   .get("/", (c) =>
     c.render(<HomePage />, {
       title: "Home Page",
       description: "This is the home page",
-    }),
+    })
   )
   .get("/ui", (c) =>
     c.render(<UIPage />, {
       title: "UI Page",
       description: "This is the UI page",
-    }),
+    })
   )
   .get("/form", (c) =>
     c.render(<FormPage />, {
       title: "Form Page",
       description: "This is the Form page",
-    }),
+    })
   );
 
 export default appRoutes;
