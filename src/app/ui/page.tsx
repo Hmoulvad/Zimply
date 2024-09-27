@@ -5,8 +5,10 @@ import Dialog from "ui/Dialog";
 import Display from "ui/Display";
 import ArrowRight from "ui/Icons/Arrow/Right";
 import Typography from "ui/Typography";
+import generateUniqueRef from "utils/generateUniqueRef";
 
 export default function UIPage() {
+  const dialogRef = generateUniqueRef();
   return (
     <>
       <section class={sectionStyle}>
@@ -37,8 +39,10 @@ export default function UIPage() {
         </Accordion>
       </section>
       <section x-data class={sectionStyle}>
-        <Button x-on:click="$refs.dialogRef.showModal()">Open Dialog</Button>
-        <Dialog type="aside" title="AlpineJS Dialog" ref="dialogRef"></Dialog>
+        <Button x-on:click={`$refs.${dialogRef}?.showModal()`}>
+          Open Dialog
+        </Button>
+        <Dialog type="aside" title="AlpineJS Dialog" ref={dialogRef}></Dialog>
       </section>
     </>
   );

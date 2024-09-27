@@ -25,7 +25,7 @@ export default function Dialog({
   type = "center",
   title,
 }: Props) {
-  const id = generateID(ref);
+  const id = generateID("dialog");
   return (
     <dialog
       id={id}
