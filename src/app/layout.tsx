@@ -1,15 +1,22 @@
 import type { PropsWithChildren } from "hono/jsx";
-import StyleSheets from "./_components/StyleSheet";
-import Scripts from "./_components/Scripts";
-import Header from "./_components/Header";
+import Breadcrumbs from "ui/Breadcrumbs";
 import Footer from "./_components/Footer";
+import Header from "./_components/Header";
+import Scripts from "./_components/Scripts";
+import StyleSheets from "./_components/StyleSheet";
 
 type Props = PropsWithChildren<{
   title: string;
   description: string;
+  path: string;
 }>;
 
-export default function RootLayout({ children, title, description }: Props) {
+export default function RootLayout({
+  children,
+  title,
+  description,
+  path,
+}: Props) {
   return (
     <html lang="en">
       <head>
@@ -21,7 +28,10 @@ export default function RootLayout({ children, title, description }: Props) {
       </head>
       <body>
         <Header />
-        <main>{children}</main>
+        <main>
+          <Breadcrumbs path={path} />
+          {children}
+        </main>
         <Footer />
       </body>
     </html>

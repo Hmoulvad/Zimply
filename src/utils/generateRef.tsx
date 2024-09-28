@@ -1,4 +1,4 @@
-export default function generateUniqueRef() {
+export default function generateRef() {
   const characters = "abcdefghijklmnopqrstuvwxyz";
   let result = "";
   for (let i = 0; i < 15; i++) {

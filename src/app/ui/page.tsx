@@ -5,10 +5,10 @@ import Dialog from "ui/Dialog";
 import Display from "ui/Display";
 import ArrowRight from "ui/Icons/Arrow/Right";
 import Typography from "ui/Typography";
-import generateUniqueRef from "utils/generateUniqueRef";
+import generateRef from "utils/generateRef";
 
 export default function UIPage() {
-  const dialogRef = generateUniqueRef();
+  const dialogRef = generateRef();
   return (
     <>
       <section class={sectionStyle}>

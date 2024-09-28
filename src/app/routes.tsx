@@ -11,9 +11,9 @@ appRoutes
   // Middleware to add the RootLayout to all routes
   .use(
     "*",
-    jsxRenderer(({ children, title, description }) => {
+    jsxRenderer(({ children, title, description, path }) => {
       return (
-        <RootLayout title={title} description={description}>
+        <RootLayout title={title} description={description} path={path}>
           {children}
         </RootLayout>
       );
@@ -24,18 +24,21 @@ appRoutes
     c.render(<HomePage />, {
       title: "Home Page",
       description: "This is the home page",
+      path: "/",
     })
   )
   .get("/ui", (c) =>
     c.render(<UIPage />, {
       title: "UI Page",
       description: "This is the UI page",
+      path: "/ui",
     })
   )
   .get("/form", (c) =>
     c.render(<FormPage />, {
       title: "Form Page",
       description: "This is the Form page",
+      path: "/form",
     })
   );
 
