@@ -1,6 +1,7 @@
 import { css } from "hono/css";
 import Accordion from "ui/Accordion";
 import Button from "ui/Button/Button";
+import Carousel from "ui/Carousel";
 import Dialog from "ui/Dialog";
 import Display from "ui/Display";
 import ArrowRight from "ui/Icons/Arrow/Right";
@@ -44,6 +45,26 @@ export default function UIPage() {
         </Button>
         <Dialog type="aside" title="AlpineJS Dialog" ref={dialogRef}></Dialog>
       </section>
+      <Carousel title="Dummy Carousel">
+        <Display as="h2" variant="display2">
+          Carousel Item 1
+        </Display>
+        <Display as="h2" variant="display2">
+          Carousel Item 2
+        </Display>
+        <Display as="h2" variant="display2">
+          Carousel Item 3
+        </Display>
+        <Display as="h2" variant="display2">
+          Carousel Item 4
+        </Display>
+        <Display as="h2" variant="display2">
+          Carousel Item 5
+        </Display>
+        <Display as="h2" variant="display2">
+          Carousel Item 6
+        </Display>
+      </Carousel>
     </>
   );
 }

@@ -15,7 +15,7 @@ export default function Carousel({ children, title }: Props) {
   return (
     <section x-data class={containerStyle}>
       <header class={headerStyle}>
-        <Display as="h2" variant="display2">
+        <Display as="h3" variant="display3">
           {title}
         </Display>
         <div class={buttonContainerStyle}>
