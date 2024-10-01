@@ -1,7 +1,7 @@
-import generateID from "./generateID";
+import generateId from "./generateId";
 
 export default function generateHTMXAttributes(prefix = "id") {
-  const id = generateID(prefix);
+  const id = generateId(prefix);
   return {
     ["htmx-id"]: id,
     ["htmx-target"]: `#${id}`,

@@ -49,21 +49,6 @@ export default function StyleSheets() {
             scroll-padding-top: var(--size-9);
           }
         }
-
-        body {
-          display: grid;
-          grid-template-rows: auto 1fr auto;
-          grid-template-columns: 100dvw;
-          gap: var(--size-2);
-          height: 100dvh;
-        }
-
-        main {
-          padding: var(--size-2);
-          display: flex;
-          flex-direction: column;
-          gap: var(--size-3);
-        }
       `}
       </style>
       {/* Open Props Variables */}

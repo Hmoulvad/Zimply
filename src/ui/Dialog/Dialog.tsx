@@ -11,7 +11,7 @@ import {
   headerStyle,
   sectionStyle,
 } from "./styles";
-import generateID from "utils/generateID";
+import generateId from "utils/generateId";
 
 type Props = PropsWithChildren<{
   ref: string;
@@ -25,7 +25,7 @@ export default function Dialog({
   type = "center",
   title,
 }: Props) {
-  const id = generateID("dialog");
+  const id = generateId("dialog");
   return (
     <dialog
       id={id}

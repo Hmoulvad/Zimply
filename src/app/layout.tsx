@@ -3,6 +3,7 @@ import Breadcrumbs from "ui/Breadcrumbs";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Scripts from "./_components/Scripts";
+import { css } from "hono/css";
 import StyleSheets from "./_components/StyleSheet";
 
 type Props = PropsWithChildren<{
@@ -26,9 +27,9 @@ export default function RootLayout({
         <StyleSheets />
         <Scripts />
       </head>
-      <body>
+      <body class={bodyStyle}>
         <Header />
-        <main>
+        <main class={mainStyle}>
           <Breadcrumbs path={path} />
           {children}
         </main>
@@ -37,3 +38,18 @@ export default function RootLayout({
     </html>
   );
 }
+
+const bodyStyle = css`
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100dvw;
+  gap: var(--size-2);
+  height: 100dvh;
+`;
+
+const mainStyle = css`
+  padding: var(--size-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--size-3);
+`;
