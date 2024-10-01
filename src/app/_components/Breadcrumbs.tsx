@@ -1,7 +1,7 @@
 import { css } from "hono/css";
-import ChevronRight from "./Icons/Chevron/Right";
-import House from "./Icons/House";
-import Link from "./Link";
+import ChevronRight from "ui/Icons/Chevron/Right";
+import House from "ui/Icons/House";
+import Link from "ui/Link";
 
 type Props = {
   path: string;

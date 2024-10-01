@@ -1,9 +1,9 @@
+import { css } from "hono/css";
 import type { PropsWithChildren } from "hono/jsx";
-import Breadcrumbs from "ui/Breadcrumbs";
+import Breadcrumbs from "./_components/Breadcrumbs";
 import Footer from "./_components/Footer";
 import Header from "./_components/Header";
 import Scripts from "./_components/Scripts";
-import { css } from "hono/css";
 import StyleSheets from "./_components/StyleSheet";
 
 type Props = PropsWithChildren<{

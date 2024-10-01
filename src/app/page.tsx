@@ -1,5 +1,6 @@
 import { css } from "hono/css";
 import Display from "ui/Display";
+import Tooltip from "ui/Tooltip";
 
 export default function HomePage() {
   return (
@@ -7,6 +8,7 @@ export default function HomePage() {
       <Display as="h1" variant="display3">
         HomePage
       </Display>
+      <Tooltip content="This is a Tooltip" message="Message of the Tooltip" />
     </section>
   );
 }
