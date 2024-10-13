@@ -11,7 +11,7 @@ import {
   headerStyle,
   sectionStyle,
 } from "./styles";
-import generateId from "utils/generateId";
+import generateId from "utils/generateIds";
 
 type Props = PropsWithChildren<{
   ref: string;

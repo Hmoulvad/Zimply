@@ -1,4 +1,4 @@
-import generateId from "utils/generateId";
+import generateId from "utils/generateIds";
 import Typography from "./Typography";
 import { css, keyframes } from "hono/css";
 
